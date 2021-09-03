@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+
+@each $key, $font-scale in $font-scales {
+    @if $key == h1 {
+        #{$key} {
+            font-family: $secondary-font-stack;
+            font-size: $font-scale;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    } @else if $key == h2 {
+        #{$key} {
+            font-family: $secondary-font-stack;
+            font-size: $font-scale;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    } @else if $key == h3 {
+        #{$key} {
+            font-family: $secondary-font-stack;
+            font-size: $font-scale;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    } @else if $key == h4 {
+        #{$key} {
+            font-family: $secondary-font-stack;
+            font-size: $font-scale;
+            text-transform: capitalize;
+        }
+    } @else if $key == h5 {
+        #{$key} {
+            font-family: $secondary-font-stack;
+            font-size: $font-scale;
+            text-transform: capitalize;
+        }
+    } @else if $key == h6 {
+        #{$key} {
+            font-family: $secondary-font-stack;
+            font-size: $font-scale;
+            text-transform: capitalize;
+        }
+    } @else if $key == li {
+        #{$key} {
+            font-size: $font-scale;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    } @else {
+        #{$key} {
+            font-size: $font-scale;
+        }
+    }
+}

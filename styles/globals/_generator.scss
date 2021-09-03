@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+:root {
+    @each $key, $arr in $colors {
+        @if $key == link {
+            @each $key2, $arr2 in $arr {
+                @each $key3, $color in $arr2 {
+                    --#{$key}-#{$key2}-#{$key3}: #{$color};
+                }
+            }
+        } @else if $key == input {
+            @each $key2, $arr2 in $arr {
+                @each $key3, $color in $arr2 {
+                    --#{$key}-#{$key2}-#{$key3}: #{$color};
+                }
+            }
+        } @else if $key == button {
+            @each $key2, $arr2 in $arr {
+                @each $key3, $color in $arr2 {
+                    --#{$key}-#{$key2}-#{$key3}: #{$color};
+                }
+            }
+        } @else {
+            @each $key2, $color in $arr {
+                --#{$key}-#{$key2}: #{$color};
+            }
+        }
+    }
+}

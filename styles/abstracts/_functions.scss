@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function font-maker($family, $kor, $font-default: var(--font-default)) {
+    @return #{$family}, #{$kor}, #{$font-default};
+}
+
+@function rem($px: 16) {
+    @return math.div($px, 16) + rem;
+}

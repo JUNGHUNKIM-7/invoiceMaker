@@ -1,0 +1,139 @@
+@use '../abstracts' as a;
+@use '../components' as c;
+
+html {
+    font-size: map-get(a.$font-settings, size-default);
+}
+
+*,
+*::before,
+*::after {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    line-height: map-get(a.$font-settings, 'line-height');
+    font-family: a.$primary-font-stack;
+    @include a.darkMode(false); //debugging
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+code {
+    font-family: a.$code-font-stack;
+}
+
+blockquote,
+q {
+    quotes: none;
+
+    &:before {
+        content: open-quote;
+    }
+
+    &:after {
+        content: close-quote;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+table {
+    @include c.table();
+}
+
+label + input {
+    display: block;
+}
+
+label + button {
+    display: block;
+}

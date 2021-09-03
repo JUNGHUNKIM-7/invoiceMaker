@@ -1,0 +1,30 @@
+@use 'sass:color';
+
+@mixin input($type: light) {
+    input {
+        color: inherit;
+        border-radius: 5px;
+        outline: none;
+        accent-color: var(--input-light-checked);
+
+        background-color: inherit;
+        border: 1px solid var(--input-light-border);
+
+        &[type='text']:disabled,
+        &[type='checkbox']:disabled {
+            background-color: var(--input-light-disabled);
+        }
+
+        @if ($type!=light) {
+            color: var(--input-dark-text);
+            border: 1px solid var(--input-dark-border);
+
+            &[type='text']:disabled,
+            &[type='checkbox']:disabled {
+                background-color: var(--input-dark-disabled);
+            }
+
+            @content;
+        }
+    }
+}

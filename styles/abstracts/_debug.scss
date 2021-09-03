@@ -1,0 +1,70 @@
+@use 'sass:list';
+
+@mixin debug($clsList) {
+    $clrList: (#d6d3d1, #facc15, #dc2626, #2563eb, #57534e);
+    $length: length($clsList);
+
+    @if ($length == 1) {
+        &__#{nth($clsList, 1)} {
+            border: 3px solid nth($clrList, 1);
+        }
+    } @else if ($length == 2) {
+        &__#{nth($clsList, 1)} {
+            border: 3px solid nth($clrList, 1);
+
+            &__#{nth($clsList, 2)} {
+                border: 2px dashed nth($clrList, 2);
+            }
+        }
+    } @else if ($length == 3) {
+        &__#{nth($clsList, 1)} {
+            border: 3px solid nth($clrList, 1);
+
+            &__#{nth($clsList, 2)} {
+                border: 2px dashed nth($clrList, 2);
+
+                &__#{nth($clsList, 3)} {
+                    border: 1px solid nth($clrList, 3);
+                }
+            }
+        }
+    } @else if ($length == 4) {
+        &__#{nth($clsList, 1)} {
+            border: 3px solid nth($clrList, 1);
+
+            &__#{nth($clsList, 2)} {
+                border: 2px dashed nth($clrList, 2);
+
+                &__#{nth($clsList, 3)} {
+                    border: 1px solid nth($clrList, 3);
+
+                    &__#{nth($clsList, 4)} {
+                        border: 1px solid nth($clrList, 4);
+                    }
+                }
+            }
+        }
+    } @else if ($length == 5) {
+        &__#{nth($clsList, 1)} {
+            border: 3px solid nth($clrList, 1);
+
+            &__#{nth($clsList, 2)} {
+                border: 2px dashed nth($clrList, 2);
+
+                &__#{nth($clsList, 3)} {
+                    border: 1px solid nth($clrList, 3);
+
+                    &__#{nth($clsList, 4)} {
+                        border: 1px solid nth($clrList, 4);
+
+                        &__#{nth($clsList, 5)} {
+                            border: 1px solid nth($clrList, 5);
+                        }
+                    }
+                }
+            }
+        }
+    } @else {
+        @error 'consider optimize your wrapper components';
+    }
+}

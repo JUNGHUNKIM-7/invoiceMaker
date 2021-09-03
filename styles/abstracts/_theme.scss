@@ -1,0 +1,19 @@
+@use '../components' as c;
+
+@mixin darkMode($dark) {
+    @if $dark == false {
+        background-color: var(--light-bg);
+        color: var(--light-font);
+
+        @include c.button();
+        @include c.link();
+        @include c.input();
+    } @else {
+        background-color: var(--dark-bg);
+        color: var(--dark-font);
+
+        @include c.button(dark);
+        @include c.link(dark);
+        @include c.input(dark);
+    }
+}

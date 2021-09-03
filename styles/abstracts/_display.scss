@@ -1,0 +1,27 @@
+@mixin grid($repeat: 0, $fr: 1, $gap: 2) {
+    display: grid;
+    gap: #{$gap}rem;
+    grid-template-columns: repeat(#{$repeat}, minmax(min-content, #{$fr}fr));
+    grid-auto-rows: minmax(min-content, auto);
+    @content;
+}
+
+@mixin flex(
+    $horizontal: flex-start,
+    $vertical: flex-start,
+    $direction: row,
+    $gap: 1
+) {
+    @if $direction != row {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: $vertical;
+        align-items: $horizontal;
+        gap: #{$gap}rem;
+    }
+    display: flex;
+    flex-flow: $direction wrap;
+    justify-content: $horizontal;
+    align-items: $vertical;
+    gap: #{$gap}rem;
+}

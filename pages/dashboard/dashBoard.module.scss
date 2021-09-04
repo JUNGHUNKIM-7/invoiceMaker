@@ -20,10 +20,10 @@
         grid-area: n;
         border: 2px solid #d6d3d1;
         border-radius: 5px;
-        position: relative;
         padding: 1em;
         min-width: min-content;
         max-width: available;
+        position: relative;
 
         &__hidden_nav {
             background-color: #292524;
@@ -33,9 +33,11 @@
             width: 100%;
             position: absolute;
             top: 0;
+            left: 0;
             z-index: 1;
             display: grid;
             grid-template-rows: auto 1fr;
+            border-radius: 5px;
 
             div {
                 margin: 1em;
@@ -56,7 +58,7 @@
 
         &__navComponent {
             height: 100%;
-            @include a.flex(space-between, center, column);
+            @include a.flex(space-evenly, center, column);
 
             &__top {
                 @include a.flex(center, center, column, 0);
@@ -65,6 +67,10 @@
                     font-size: clamp(1.4em, 2vw, 1.6em);
                 }
                 &__toggle {
+                    div {
+                        display: flex;
+                        align-items: center;
+                    }
                 }
 
                 @include a.mq-tablet {
@@ -72,8 +78,6 @@
                 }
             }
             &__navi_lists {
-                width: 100%;
-                margin-bottom: 40%;
 
                 li {
                     margin-top: 1em;
@@ -95,6 +99,7 @@
 
                     @include a.mq-desktop {
                         @include a.flex(flex-start, center, row, 0);
+                        padding-left: 2em;
 
                         a {
                             margin-left: 1em;

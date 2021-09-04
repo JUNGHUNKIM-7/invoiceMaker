@@ -20,6 +20,7 @@ import {
     UseGlobalReducer,
 } from '../../../utils/reducer/globalState'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
+import { DiVim } from 'react-icons/all'
 
 const NavComponent: NextPage = () => {
     // @ts-ignore
@@ -102,9 +103,13 @@ const NavComponent: NextPage = () => {
                         }
                     >
                         {state.toggleTheme ? (
-                            <RiSunFill size={20} />
+                            <div>
+                                <RiSunFill size={20} />
+                            </div>
                         ) : (
-                            <RiMoonClearLine size={20} />
+                            <div>
+                                <RiMoonClearLine size={20} />
+                            </div>
                         )}
                     </button>
                 </div>

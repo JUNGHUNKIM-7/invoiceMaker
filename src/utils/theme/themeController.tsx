@@ -2,8 +2,6 @@ import type { NextPage } from 'next'
 import t from './themeController.module.scss'
 import { UseGlobalReducer } from '../reducer/globalState'
 
-//todo add Layoutbar?
-
 const ThemeController: NextPage = ({ children }) => {
     // @ts-ignore
     const { state } = UseGlobalReducer()

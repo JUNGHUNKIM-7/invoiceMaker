@@ -1,0 +1,6 @@
+@use '../../styles/abstracts' as a;
+
+.sales_layout{
+    @include a.flex(flex-end, center);
+    margin: 2em;
+}

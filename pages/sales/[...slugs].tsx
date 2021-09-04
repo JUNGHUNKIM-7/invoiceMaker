@@ -1,13 +1,12 @@
 import type { NextPage } from 'next'
-import { useRouter } from 'next/router'
+import { useRouting } from '../../src/utils/route/routing'
 import Invoices from '../../src/components/pages/sales/invoices'
 import Quotes from '../../src/components/pages/quotes/quotes'
 import Custom404 from '../404'
 import PurchaseOrders from '../../src/components/pages/purchaseOrder/purchaseOrders'
 
 const Sales: NextPage = () => {
-    const router = useRouter()
-    const p = router.query.slugs
+    const { p } = useRouting()
 
     if (p && p[0] == 'invoicePages') {
         return <Invoices />

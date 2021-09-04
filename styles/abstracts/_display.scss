@@ -3,6 +3,7 @@
     gap: #{$gap}rem;
     grid-template-columns: repeat(#{$repeat}, minmax(min-content, #{$fr}fr));
     grid-auto-rows: minmax(min-content, auto);
+    grid-auto-flow: dense;
     @content;
 }
 

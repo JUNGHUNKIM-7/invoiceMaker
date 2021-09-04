@@ -1,25 +1,24 @@
-import React from 'react'
 import type { NextPage } from 'next'
-import { useRouter } from 'next/router'
 import CommercialInvoice from './sales/invoicePages/commercial-invoice'
 import ProformaInvoice from './sales/invoicePages/proforma-invoice'
 import SalesContract from './sales/invoicePages/sales-contract'
 import Quotation from './quotes/quotation'
 import RequestForQuotation from './quotes/request-for-quotation'
 import PurchaseOrder from './purchaseOrder/purchase-order'
+import PageControllerLayout from './pageControllerLayout'
+import { useRouting } from '../../utils/route/routing'
 
 interface props {
     title: string
 }
 
+//button.
 const PageController: NextPage<props> = ({ title }) => {
-    const router = useRouter()
-    const p = router.query.slugs
-    console.log(p)
+    const { p } = useRouting()
 
-    if (title !== 'invoicePages' && title !== 'quotes') {
+    if (title !== 'invoices' && title !== 'quotes') {
         return (
-            <div>
+            <PageControllerLayout>
                 <nav>
                     <label>Search</label>
                     <input />
@@ -31,12 +30,12 @@ const PageController: NextPage<props> = ({ title }) => {
                 <h1>{title}</h1>
 
                 <PurchaseOrder />
-            </div>
+            </PageControllerLayout>
         )
     }
 
     return (
-        <div>
+        <PageControllerLayout>
             <nav>
                 <label>Search</label>
                 <input />
@@ -52,7 +51,7 @@ const PageController: NextPage<props> = ({ title }) => {
             {p && p[1] === 'sales-contract' && <SalesContract />}
             {p && p[1] === 'quotation' && <Quotation />}
             {p && p[1] === 'request-for-quotation' && <RequestForQuotation />}
-        </div>
+        </PageControllerLayout>
     )
 }
 

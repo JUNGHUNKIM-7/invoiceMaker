@@ -4,8 +4,8 @@
 .boardMain {
     @include a.grid(5, 1, 1) {
         grid-template-areas:
-            'n n t t t'
-            'n n r r r'
+            'n t t t t'
+            'n r r r r'
             'c c c c c';
     }
 
@@ -20,20 +20,60 @@
         grid-area: n;
         border: 2px solid #d6d3d1;
         border-radius: 5px;
+        position: relative;
+        padding: 1em;
+        min-width: min-content;
+        max-width: available;
+
+        &__hidden_nav {
+            background-color: #292524;
+            color: #f9fafb;
+            opacity: 0.95;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            display: grid;
+            grid-template-rows: auto 1fr;
+
+            div {
+                margin: 1em;
+                justify-self: end;
+            }
+            ul {
+                text-align: center;
+                justify-self: center;
+                align-self: center;
+                li {
+                    cursor: pointer;
+                    &:not(:first-child) {
+                        margin-top: 3em;
+                    }
+                }
+            }
+        }
 
         &__navComponent {
             height: 100%;
-            @include a.flex(space-evenly, center, column);
+            @include a.flex(space-between, center, column);
 
-            > div {
-                @include a.flex(center, center);
+            &__top {
+                @include a.flex(center, center, column, 0);
 
                 p {
                     font-size: clamp(1.4em, 2vw, 1.6em);
                 }
+                &__toggle {
+                }
+
+                @include a.mq-tablet {
+                    @include a.flex(flex-start, center);
+                }
             }
-            > ul {
+            &__navi_lists {
                 width: 100%;
+                margin-bottom: 40%;
 
                 li {
                     margin-top: 1em;
@@ -46,8 +86,18 @@
                         display: block;
                         font-size: clamp(0.8em, 2vw, 1em);
                         font-weight: 500;
+                        text-align: center;
+
                         &:hover {
                             color: #71717a;
+                        }
+                    }
+
+                    @include a.mq-desktop {
+                        @include a.flex(flex-start, center, row, 0);
+
+                        a {
+                            margin-left: 1em;
                         }
                     }
                 }
@@ -63,7 +113,6 @@
         border-radius: 5px;
 
         &__converterWrapper {
-
             & label {
                 text-transform: capitalize;
             }
@@ -121,7 +170,6 @@
                     text-align: center;
                 }
                 &:last-child {
-                    //border-bottom: 1px solid red;
                     text-align: center;
                     font-weight: 500;
                     font-size: 1.5em;
@@ -144,6 +192,7 @@
                 }
                 &:last-child {
                     font-size: 1.5em;
+
                     span {
                         &:first-child {
                             text-transform: capitalize;
@@ -168,10 +217,18 @@
 
     //>tablet
     @include a.mq-tablet {
+        @include a.grid(8, 1, 2) {
+            grid-template-areas:
+                'n n t t t t t t'
+                'n n r r r r r r'
+                'c c c c c c c c';
+        }
+    }
+    @include a.mq-desktop {
         @include a.grid(12, 1, 2) {
             grid-template-areas:
-                'n n n n t t t t t t t t'
-                'n n n n r r r r r r r r'
+                'n n n t t t t t t t t t'
+                'n n n r r r r r r r r r'
                 'c c c c c c c c c c c c';
         }
     }

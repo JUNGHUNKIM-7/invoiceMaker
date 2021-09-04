@@ -20,16 +20,29 @@ import {
     UseGlobalReducer,
 } from '../../../utils/reducer/globalState'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
-import { DiVim } from 'react-icons/all'
+import { endPoint } from '../../../utils/route/endPoints'
 
 const NavComponent: NextPage = () => {
-    // @ts-ignore
-    const { state, dispatch } = UseGlobalReducer()
-
+    const {
+        // @ts-ignore
+        state: { toggleTheme },
+        // @ts-ignore
+        dispatch,
+    } = UseGlobalReducer()
     const { routerPush } = useRouting()
 
     const [invoiceToggle, setInvoiceToggle] = useState(false)
     const [quoteToggle, setQuoteToggle] = useState(false)
+
+    const {
+        sales: {
+            invoices: { data: invoices },
+            quotes: { data: quotes },
+            purchaseOrder,
+        },
+        products,
+        contacts,
+    } = endPoint
 
     return (
         <>
@@ -39,31 +52,15 @@ const NavComponent: NextPage = () => {
                         <AiOutlineCloseCircle size={25} />
                     </div>
                     <ul>
-                        <li
-                            onClick={() =>
-                                routerPush(
-                                    'sales/invoicePages/commercial-invoice'
-                                )
-                            }
-                        >
-                            invoices
-                        </li>
-                        <li
-                            onClick={() =>
-                                routerPush(
-                                    'sales/invoicePages/proforma-invoice'
-                                )
-                            }
-                        >
-                            proforma invoice
-                        </li>
-                        <li
-                            onClick={() =>
-                                routerPush('sales/invoicePages/sales-contract')
-                            }
-                        >
-                            sales contract
-                        </li>
+                        {invoices.map((path) => (
+                            <li
+                                onClick={() =>
+                                    routerPush(`/sales/invoices/${path}`)
+                                }
+                            >
+                                {path.replaceAll('-', ' ')}
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             )}
@@ -73,18 +70,15 @@ const NavComponent: NextPage = () => {
                         <AiOutlineCloseCircle size={25} />
                     </div>
                     <ul>
-                        <li
-                            onClick={() => routerPush('sales/quotes/quotation')}
-                        >
-                            quotation
-                        </li>
-                        <li
-                            onClick={() =>
-                                routerPush('sales/quotes/request-for-quotation')
-                            }
-                        >
-                            request for quotation
-                        </li>
+                        {quotes.map((path) => (
+                            <li
+                                onClick={() =>
+                                    routerPush(`/sales/quotes/${path}`)
+                                }
+                            >
+                                {path.replaceAll('-', ' ')}
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             )}
@@ -102,7 +96,7 @@ const NavComponent: NextPage = () => {
                             dispatch({ type: GlobalActionEnum.DARKMODE })
                         }
                     >
-                        {state.toggleTheme ? (
+                        {toggleTheme ? (
                             <div>
                                 <RiSunFill size={20} />
                             </div>
@@ -131,19 +125,23 @@ const NavComponent: NextPage = () => {
                         </i>
                         <a>quotes</a>
                     </li>
-                    <li onClick={() => routerPush('sales/purchase-order')}>
+                    <li
+                        onClick={() =>
+                            routerPush(`/sales/${purchaseOrder.data}`)
+                        }
+                    >
                         <i>
                             <HiDocumentSearch size={25} />
                         </i>
                         <a>purchase orders</a>
                     </li>
-                    <li onClick={() => routerPush('contacts')}>
+                    <li onClick={() => routerPush(`/${contacts.data}`)}>
                         <i>
                             <RiContactsBookFill size={25} />
                         </i>
                         <a>contacts</a>
                     </li>
-                    <li onClick={() => routerPush('products')}>
+                    <li onClick={() => routerPush(`/${products.data}`)}>
                         <i>
                             <RiFileList3Fill size={25} />
                         </i>

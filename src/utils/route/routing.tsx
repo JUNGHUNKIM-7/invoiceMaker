@@ -5,7 +5,7 @@ export const useRouting = () => {
     const p = router.query.slugs
 
     const routerPush = (path: string) => {
-        router.push({ pathname: `/${path}` })
+        router.push({ pathname: `${path}` })
     }
     const routerBack = () => {
         router.back()

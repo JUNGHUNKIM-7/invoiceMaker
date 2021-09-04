@@ -8,7 +8,7 @@ import PurchaseOrders from '../../src/components/pages/purchaseOrder/purchaseOrd
 const Sales: NextPage = () => {
     const { p } = useRouting()
 
-    if (p && p[0] == 'invoicePages') {
+    if (p && p[0] == 'invoices') {
         return <Invoices />
     }
     if (p && p[0] == 'quotes') {

@@ -19,12 +19,11 @@ const globalReducer = (state: GlobalInitialType, action: GlobalActionType) => {
                 toggleTheme: !state.toggleTheme,
             }
         default:
-            break
+            return state
     }
 }
 
 export const globalStore = () => {
-    // @ts-ignore
     const [state, dispatch] = useReducer(globalReducer, globalInitialState)
 
     return {

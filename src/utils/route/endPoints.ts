@@ -1,4 +1,5 @@
 export const endPoint = {
+    // /sales/invoices-sub/[data]
     sales: {
         invoices: {
             data: ['commercial-invoice', 'proforma-invoice', 'sales-contract'],
@@ -10,9 +11,11 @@ export const endPoint = {
             data: 'purchase-order',
         },
     },
+    // /contacts
     contacts: {
         data: 'contacts',
     },
+    // /products
     products: {
         data: 'products',
     },

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import PageController from '../pageController'
+import PageController from '../page-controller'
 
 const PurchaseOrders: NextPage = () => {
     return <PageController title={'purchase order'} />

@@ -1,0 +1,19 @@
+@use '../../../styles/abstracts' as a;
+
+.dashBoardLayout {
+    @include a.flex(space-between, center);
+    padding: 1em 1em 0 1em;
+
+    > div {
+        @include a.flex(flex-start, center);
+    }
+    &__toggle {
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @include a.mq-tablet {
+    }
+}

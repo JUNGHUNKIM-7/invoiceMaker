@@ -5,30 +5,16 @@ import {
     HiDocumentReport,
     HiDocumentSearch,
 } from 'react-icons/hi'
-import {
-    RiContactsBookFill,
-    RiFileList3Fill,
-    RiMoonClearLine,
-    RiSunFill,
-} from 'react-icons/ri'
+import { RiContactsBookFill, RiFileList3Fill } from 'react-icons/ri'
 import { FaShareAlt } from 'react-icons/fa'
-import { IoIosContact } from 'react-icons/io'
 import { useState } from 'react'
 import { useRouting } from '../../../utils/route/routing'
-import {
-    GlobalActionEnum,
-    UseGlobalReducer,
-} from '../../../utils/reducer/globalState'
+
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { endPoint } from '../../../utils/route/endPoints'
+import React from 'react'
 
 const NavComponent: NextPage = () => {
-    const {
-        // @ts-ignore
-        state: { toggleTheme },
-        // @ts-ignore
-        dispatch,
-    } = UseGlobalReducer()
     const { routerPush } = useRouting()
 
     const [invoiceToggle, setInvoiceToggle] = useState(false)
@@ -52,14 +38,16 @@ const NavComponent: NextPage = () => {
                         <AiOutlineCloseCircle size={25} />
                     </div>
                     <ul>
-                        {invoices.map((path) => (
-                            <li
-                                onClick={() =>
-                                    routerPush(`/sales/invoices/${path}`)
-                                }
-                            >
-                                {path.replaceAll('-', ' ')}
-                            </li>
+                        {invoices.map((path, idx) => (
+                            <React.Fragment key={idx}>
+                                <li
+                                    onClick={() =>
+                                        routerPush(`/sales/invoices/${path}`)
+                                    }
+                                >
+                                    {path.replaceAll('-', ' ')}
+                                </li>
+                            </React.Fragment>
                         ))}
                     </ul>
                 </nav>
@@ -70,43 +58,21 @@ const NavComponent: NextPage = () => {
                         <AiOutlineCloseCircle size={25} />
                     </div>
                     <ul>
-                        {quotes.map((path) => (
-                            <li
-                                onClick={() =>
-                                    routerPush(`/sales/quotes/${path}`)
-                                }
-                            >
-                                {path.replaceAll('-', ' ')}
-                            </li>
+                        {quotes.map((path, idx) => (
+                            <React.Fragment key={idx}>
+                                <li
+                                    onClick={() =>
+                                        routerPush(`/sales/quotes/${path}`)
+                                    }
+                                >
+                                    {path.replaceAll('-', ' ')}
+                                </li>
+                            </React.Fragment>
                         ))}
                     </ul>
                 </nav>
             )}
             <nav className={b.boardMain__navWrapper__navComponent}>
-                <div className={b.boardMain__navWrapper__navComponent__top}>
-                    <i>
-                        <IoIosContact size={25} />
-                    </i>
-                    <p>user</p>
-                    <button
-                        className={
-                            b.boardMain__navWrapper__navComponent__top__toggle
-                        }
-                        onClick={() =>
-                            dispatch({ type: GlobalActionEnum.DARKMODE })
-                        }
-                    >
-                        {toggleTheme ? (
-                            <div>
-                                <RiSunFill size={20} />
-                            </div>
-                        ) : (
-                            <div>
-                                <RiMoonClearLine size={20} />
-                            </div>
-                        )}
-                    </button>
-                </div>
                 <ul
                     className={
                         b.boardMain__navWrapper__navComponent__navi_lists

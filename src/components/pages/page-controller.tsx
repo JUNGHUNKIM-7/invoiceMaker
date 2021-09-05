@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import CommercialInvoice from './sales/invoicePages/commercial-invoice'
-import ProformaInvoice from './sales/invoicePages/proforma-invoice'
-import SalesContract from './sales/invoicePages/sales-contract'
-import Quotation from './quotes/quotation'
-import RequestForQuotation from './quotes/request-for-quotation'
-import PurchaseOrder from './purchaseOrder/purchase-order'
-import PageControllerLayout from './pageControllerLayout'
+import CommercialInvoice from './sales/invoices-sub/commercial-invoice'
+import ProformaInvoice from './sales/invoices-sub/proforma-invoice'
+import SalesContract from './sales/invoices-sub/sales-contract'
+import Quotation from './quotes/quotes-sub/quotation'
+import RequestForQuotation from './quotes/quotes-sub/request-for-quotation'
+import PurchaseOrder from './purchase-order/purchase-sub/purchase-order'
+import PageControllerLayout from '../layout-theme/page-controller-layout'
 import { useRouting } from '../../utils/route/routing'
 
 interface props {

@@ -3,7 +3,7 @@ import { useRouting } from '../../src/utils/route/routing'
 import Invoices from '../../src/components/pages/sales/invoices'
 import Quotes from '../../src/components/pages/quotes/quotes'
 import Custom404 from '../404'
-import PurchaseOrders from '../../src/components/pages/purchaseOrder/purchaseOrders'
+import PurchaseOrders from '../../src/components/pages/purchase-order/purchase-orders'
 
 const Sales: NextPage = () => {
     const { p } = useRouting()

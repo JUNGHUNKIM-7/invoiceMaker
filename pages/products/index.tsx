@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import PageController from '../../src/components/pages/pageController'
+import PageController from '../../src/components/pages/page-controller'
 
 const Index: NextPage = () => {
     return (

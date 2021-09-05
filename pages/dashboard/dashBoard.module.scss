@@ -30,7 +30,7 @@
             color: #f9fafb;
             opacity: 0.95;
             height: 100%;
-            width: 100%;
+            width: 50vw;
             position: absolute;
             top: 0;
             left: 0;
@@ -47,6 +47,7 @@
                 text-align: center;
                 justify-self: center;
                 align-self: center;
+
                 li {
                     cursor: pointer;
                     &:not(:first-child) {
@@ -54,33 +55,24 @@
                     }
                 }
             }
+
+            @include a.mq-tablet {
+                width: 30vw;
+            }
+            @include a.mq-desktop {
+                width: 100%;
+            }
         }
 
         &__navComponent {
             height: 100%;
-            @include a.flex(space-evenly, center, column);
+            @include a.flex(flex-start, center, column);
 
-            &__top {
-                @include a.flex(center, center, column, 0);
-
-                p {
-                    font-size: clamp(1.4em, 2vw, 1.6em);
-                }
-                &__toggle {
-                    div {
-                        display: flex;
-                        align-items: center;
-                    }
-                }
-
-                @include a.mq-tablet {
-                    @include a.flex(flex-start, center);
-                }
-            }
             &__navi_lists {
-
                 li {
-                    margin-top: 1em;
+                    &:not(:first-child) {
+                        margin-top: 1em;
+                    }
                     @include a.flex(center, center, column, 0);
 
                     i {
@@ -99,7 +91,7 @@
 
                     @include a.mq-desktop {
                         @include a.flex(flex-start, center, row, 0);
-                        padding-left: 2em;
+                        padding-left: 1em;
 
                         a {
                             margin-left: 1em;
@@ -107,115 +99,139 @@
                     }
                 }
             }
+            @include a.mq-desktop{
+                @include a.flex(center, center, column);
+            }
         }
     }
 
     //top - section
     &__topWrapper {
         grid-area: t;
-        padding: 1em;
         border: 2px solid #d6d3d1;
         border-radius: 5px;
+        padding: 1em;
 
-        &__converterWrapper {
+        h4 {
+            border-bottom: 1px dashed black;
+            margin-bottom: 1em;
+        }
+
+        &__search {
+            height: 100%;
+
             & label {
                 text-transform: capitalize;
+                font-weight: 600;
             }
             &__input {
-                @include a.flex(flex-start, center);
+                @include a.flex(center, center, row, 2);
 
-                input {
-                    width: 100%;
-                    height: 2em;
+                div {
+                    flex: 1;
+
+                    input {
+                        width: 100%;
+                        height: 2em;
+                    }
                 }
             }
             &__selection {
-                @include a.flex(center, center);
-                margin-top: 0.5em;
+                margin-top: 2em;
 
-                &__from {
-                }
-                &__to {
-                }
-            }
-            &__btn {
-                margin: 0.5em auto;
-            }
-        }
-    }
-
-    //main - section
-    &__resultWrapper {
-        grid-area: r;
-        padding: 0.5em;
-        border: 2px solid #d6d3d1;
-        border-radius: 5px;
-        display: grid;
-        grid-template-rows: repeat(3, 1fr);
-
-        &__ref {
-            grid-row: 1/2;
-
-            p {
-                text-align: center;
-
-                &:first-child {
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    margin-bottom: 0.5em;
-                }
-            }
-        }
-        &__result {
-            grid-row: 2/3;
-            margin-top: 2em;
-
-            p {
-                &:first-child {
-                    text-align: center;
-                }
-                &:last-child {
-                    text-align: center;
-                    font-weight: 500;
-                    font-size: 1.5em;
-                }
-            }
-        }
-        &__last_updated {
-            grid-row: 3/-1;
-            margin-top: 2em;
-
-            p {
-                font-size: 1em;
-                font-weight: 600;
-                text-align: end;
-                justify-self: end;
-                align-self: end;
-
-                &:first-child {
-                    text-transform: capitalize;
-                }
-                &:last-child {
-                    font-size: 1.5em;
+                &__from_to {
+                    @include a.flex(flex-end, center, row, 1);
 
                     span {
-                        &:first-child {
-                            text-transform: capitalize;
-                        }
+                        margin-left: 0.5em;
 
-                        &:last-child {
-                            text-transform: uppercase;
+                        label {
+                            margin-right: 0.5em;
                         }
+                    }
+
+                    @include a.mq-desktop {
+                        @include a.flex(center, center, row, 2);
+                        span {
+                            margin-left: 2em;
+
+                            label {
+                                margin-right: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+            &__btnWrapper {
+                margin-top: 1em;
+                @include a.flex(center, center);
+
+                button {
+                    div {
+                        @include a.flex(center, center);
                     }
                 }
             }
         }
     }
 
+    //main - section
     &__cardWrapper {
-        grid-area: c;
+        grid-area: r;
+        border: 2px solid #d6d3d1;
+        padding: 1em;
+
+        h4 {
+            border-bottom: 1px dashed black;
+            margin-bottom: 1em;
+        }
+
         &__cardComponents {
             &__cardComponent {
+                span {
+                    display: block;
+                }
+                border: 1px solid #d6d3d1;
+                border-radius: 5px;
+                padding: 0.5em;
+                margin-bottom: 1em;
+
+                div {
+                    @include a.flex(space-between, center);
+                    span {
+                        margin-bottom: 1em;
+                        &:first-of-type {
+                            font-weight: 700;
+                            font-size: clamp(1.4em, 2vw, 1.6em);
+                        }
+
+                        &:last-of-type {
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    &:last-of-type {
+                        text-align: end;
+                    }
+                }
+            }
+            @include a.mq-desktop {
+                @include a.flex(center, center, row, 2);
+
+                div {
+                    @include a.flex(space-between, center, column, 0);
+
+                    span {
+                        margin: 0;
+                        &:first-child,
+                        &:last-child {
+                            margin-bottom: 0.5em;
+                        }
+                    }
+                }
             }
         }
     }
@@ -237,8 +253,4 @@
                 'c c c c c c c c c c c c';
         }
     }
-}
-
-.boardMain {
-    @include a.debug([cardWrapper, cardComponents, cardComponent]);
 }

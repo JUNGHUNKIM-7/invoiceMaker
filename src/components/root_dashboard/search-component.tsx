@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
-import b from '../../../../pages/dashboard/dashBoard.module.scss'
+import b from './styles/dashBoard.module.scss'
 import { HiDocumentSearch } from 'react-icons/hi'
-import SearchInputSubComponent from './search-sub/search-input-sub-component'
-import SearchSelectionSubComponent from './search-sub/search-selection-sub-component'
+import SearchInputSubComponent from './search-input-sub-component'
+import SearchSelectionSubComponent from './search-selection-sub-component'
 
 const SearchComponent: NextPage = () => {
     return (

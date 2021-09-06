@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import CommercialInvoice from './sales/invoices-sub/commercial-invoice'
-import ProformaInvoice from './sales/invoices-sub/proforma-invoice'
-import SalesContract from './sales/invoices-sub/sales-contract'
-import Quotation from './quotes/quotes-sub/quotation'
-import RequestForQuotation from './quotes/quotes-sub/request-for-quotation'
-import PurchaseOrder from './purchase-order/purchase-sub/purchase-order'
-import PageControllerLayout from '../layout-theme/page-controller-layout'
+import CommercialInvoice from './docs/invoices/commercial-invoice'
+import ProformaInvoice from './docs/invoices/proforma-invoice'
+import SalesContract from './docs/invoices/sales-contract'
+import Quotation from './docs/quotes/quotation'
+import RequestForQuotation from './docs/quotes/request-for-quotation'
+import PurchaseOrder from './docs/purchase-order/purchase-order'
+import PageControllerLayout from './page-controller-layout'
 import { useRouting } from '../../utils/route/routing'
 
 interface props {
@@ -27,7 +27,7 @@ const PageController: NextPage<props> = ({ title }) => {
                     </ul>
                 </nav>
 
-                <h1>{title}</h1>
+                <h3>{title}</h3>
 
                 <PurchaseOrder />
             </PageControllerLayout>
@@ -44,11 +44,11 @@ const PageController: NextPage<props> = ({ title }) => {
                 </ul>
             </nav>
 
-            <h1>{p && p[1]}</h1>
+            <h3>{p && p[1].replaceAll('-', ' ')}</h3>
 
             {p && p[1] === 'commercial-invoice' && <CommercialInvoice />}
             {p && p[1] === 'proforma-invoice' && <ProformaInvoice />}
-            {p && p[1] === 'sales-contract' && <SalesContract />}
+            {p && p[1] === 'invoices-contract' && <SalesContract />}
             {p && p[1] === 'quotation' && <Quotation />}
             {p && p[1] === 'request-for-quotation' && <RequestForQuotation />}
         </PageControllerLayout>

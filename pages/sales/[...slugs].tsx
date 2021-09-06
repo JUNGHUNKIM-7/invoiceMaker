@@ -1,21 +1,19 @@
 import type { NextPage } from 'next'
 import { useRouting } from '../../src/utils/route/routing'
-import Invoices from '../../src/components/pages/sales/invoices'
-import Quotes from '../../src/components/pages/quotes/quotes'
 import Custom404 from '../404'
-import PurchaseOrders from '../../src/components/pages/purchase-order/purchase-orders'
+import PageController from '../../src/components/sales_slugs/page-controller'
 
 const Sales: NextPage = () => {
     const { p } = useRouting()
 
     if (p && p[0] == 'invoices') {
-        return <Invoices />
+        return <PageController title={'invoices'} />
     }
     if (p && p[0] == 'quotes') {
-        return <Quotes />
+        return <PageController title={'quotes'} />
     }
     if (p && p[0] == 'purchase-order') {
-        return <PurchaseOrders />
+        return <PageController title={'purchase-order'} />
     }
 
     return (

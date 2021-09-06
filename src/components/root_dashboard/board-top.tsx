@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import b from '../../../pages/dashboard/dashBoard.module.scss'
-import SearchComponent from './dashboardComponent/search-component'
+import b from './styles/dashBoard.module.scss'
+import SearchComponent from './search-component'
 
 const BoardTop: NextPage = () => {
     return (

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import b from '../../../../../pages/dashboard/dashBoard.module.scss'
+import b from './styles/dashBoard.module.scss'
 import React from 'react'
-import { endPoint } from '../../../../utils/route/endPoints'
+import { endPoint } from '../../utils/route/endPoints'
 
 const SearchInputSubComponent: NextPage = () => {
     const {

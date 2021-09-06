@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import b from '../../../../pages/dashboard/dashBoard.module.scss'
+import b from './styles/dashBoard.module.scss'
 import {
     HiDocumentAdd,
     HiDocumentReport,
@@ -8,10 +8,10 @@ import {
 import { RiContactsBookFill, RiFileList3Fill } from 'react-icons/ri'
 import { FaShareAlt } from 'react-icons/fa'
 import { useState } from 'react'
-import { useRouting } from '../../../utils/route/routing'
+import { useRouting } from '../../utils/route/routing'
 
 import { AiOutlineCloseCircle } from 'react-icons/ai'
-import { endPoint } from '../../../utils/route/endPoints'
+import { endPoint } from '../../utils/route/endPoints'
 import React from 'react'
 
 const NavComponent: NextPage = () => {

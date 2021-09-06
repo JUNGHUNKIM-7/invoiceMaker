@@ -5,7 +5,7 @@ import {
     UseGlobalReducer,
 } from '../../utils/reducer/globalState'
 import { RiMoonClearLine, RiSunFill } from 'react-icons/ri'
-import l from './dashboard-layout.module.scss'
+import l from './styles/dashboard-layout.module.scss'
 
 const DashboardLayout: NextPage = ({ children }) => {
     const {

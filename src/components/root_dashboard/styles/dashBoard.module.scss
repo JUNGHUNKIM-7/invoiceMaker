@@ -1,6 +1,6 @@
-@use '../../styles/abstracts' as a;
+@use '../../../../styles/abstracts/index' as a;
 
-//dashboard - main
+// root/dashboard
 .boardMain {
     @include a.grid(5, 1, 1) {
         grid-template-areas:
@@ -9,13 +9,12 @@
             'c c c c c';
     }
 
-    //local
     padding: 1em;
     & button {
         display: block;
     }
 
-    //nav - section
+    //dashboard - navigation
     &__navWrapper {
         grid-area: n;
         border: 2px solid #d6d3d1;
@@ -73,7 +72,6 @@
                     &:not(:first-child) {
                         margin-top: 1em;
                     }
-                    @include a.flex(center, center, column, 0);
 
                     i {
                         display: block;
@@ -88,6 +86,7 @@
                             color: #71717a;
                         }
                     }
+                    @include a.flex(center, center, column, 0);
 
                     @include a.mq-desktop {
                         @include a.flex(flex-start, center, row, 0);
@@ -99,13 +98,13 @@
                     }
                 }
             }
-            @include a.mq-desktop{
+            @include a.mq-desktop {
                 @include a.flex(center, center, column);
             }
         }
     }
 
-    //top - section
+    //dashboard - topSection
     &__topWrapper {
         grid-area: t;
         border: 2px solid #d6d3d1;
@@ -175,7 +174,7 @@
         }
     }
 
-    //main - section
+    //dashboard - middleSection
     &__cardWrapper {
         grid-area: r;
         border: 2px solid #d6d3d1;
@@ -198,8 +197,10 @@
 
                 div {
                     @include a.flex(space-between, center);
+
                     span {
                         margin-bottom: 1em;
+
                         &:first-of-type {
                             font-weight: 700;
                             font-size: clamp(1.4em, 2vw, 1.6em);
@@ -209,13 +210,14 @@
                             font-weight: 500;
                         }
                     }
+
+                    &:last-of-type {
+                        @include a.flex(flex-end, center);
+                    }
                 }
 
                 p {
                     text-align: center;
-                    &:last-of-type {
-                        text-align: end;
-                    }
                 }
             }
             @include a.mq-desktop {
@@ -245,6 +247,7 @@
                 'c c c c c c c c';
         }
     }
+    //>Desktop
     @include a.mq-desktop {
         @include a.grid(12, 1, 2) {
             grid-template-areas:

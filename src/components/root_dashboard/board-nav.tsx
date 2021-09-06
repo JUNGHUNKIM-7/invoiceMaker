@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import b from '../../../pages/dashboard/dashBoard.module.scss'
-import NavComponent from './dashboardComponent/nav-component'
+import b from './styles/dashBoard.module.scss'
+import NavComponent from './nav-component'
 
 const BoardNav: NextPage = () => {
     return (

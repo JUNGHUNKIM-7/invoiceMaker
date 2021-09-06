@@ -1,4 +1,4 @@
-@use '../../../styles/abstracts' as a;
+@use '../../../../styles/abstracts/index' as a;
 
 .dashBoardLayout {
     @include a.flex(space-between, center);

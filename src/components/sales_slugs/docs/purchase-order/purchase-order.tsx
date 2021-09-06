@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
 const PurchaseOrder: NextPage = () => {
-    return <div>purchaseorder Component</div>
+    return <div>purchase order</div>
 }
 
 export default PurchaseOrder

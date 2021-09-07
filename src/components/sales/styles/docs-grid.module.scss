@@ -1,0 +1,50 @@
+@use '../../../../styles/abstracts/index' as a;
+@use '../docs-component/styles/PI.module' as pi;
+@use '../docs-component/styles/CI.module' as ci;
+@use '../docs-component/styles/body.module' as b;
+@use '../docs-component/styles/footer.module' as f;
+
+.gridWrapper {
+    @include a.grid(1, 1, 0) {
+        grid-template-areas:
+            't'
+            'b';
+    }
+    &__title {
+        grid-area: t;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 2em;
+    }
+
+    &__pageBody {
+        grid-area: b;
+
+        @include a.grid(1, 1, 0) {
+            grid-template-areas:
+                'h'
+                'b'
+                'f';
+        }
+
+        &__mainHeaderPI {
+            grid-area: h;
+            @include pi.mainHeaderPI;
+        }
+
+        &__mainHeaderCI {
+            grid-area: h;
+            @include ci.mainHeaderCI;
+        }
+
+        &__body {
+            grid-area: b;
+            @include b.mainBody;
+        }
+
+        &__footer {
+            grid-area: f;
+            @include f.mainFooter;
+        }
+    }
+}

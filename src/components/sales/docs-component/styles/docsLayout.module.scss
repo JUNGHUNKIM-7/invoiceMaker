@@ -1,0 +1,21 @@
+@use '../../../../../styles/abstracts/index' as a;
+
+.pageWrapper {
+    padding: 1em 3em 3em 3em;
+
+    input{
+        min-width: max-content;
+    }
+
+    &__back {
+        @include a.flex(space-between, center, row, 1);
+        margin-bottom: 4em;
+
+        &__btn {
+            @include a.flex(flex-start, center, row, 1);
+        }
+        p {
+            font-weight: 600;
+        }
+    }
+}

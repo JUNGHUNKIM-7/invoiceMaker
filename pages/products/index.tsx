@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
-import PageController from '../../src/components/sales_slugs/page-controller'
+import Products from '../../src/components/sales/other/products'
 
 const Index: NextPage = () => {
     return (
         <div>
-            <PageController title={'products'} />
+            <Products />
         </div>
     )
 }

@@ -8,21 +8,21 @@
 }
 
 @mixin flex(
-    $horizontal: flex-start,
-    $vertical: flex-start,
+    $mainAxis: flex-start,
+    $crossAxis: flex-start,
     $direction: row,
     $gap: 1
 ) {
     @if $direction != row {
         display: flex;
         flex-flow: column wrap;
-        justify-content: $vertical;
-        align-items: $horizontal;
+        justify-content: $crossAxis;
+        align-items: $mainAxis;
         gap: #{$gap}rem;
     }
     display: flex;
     flex-flow: $direction wrap;
-    justify-content: $horizontal;
-    align-items: $vertical;
+    justify-content: $mainAxis;
+    align-items: $crossAxis;
     gap: #{$gap}rem;
 }

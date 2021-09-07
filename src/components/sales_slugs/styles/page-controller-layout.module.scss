@@ -1,5 +1,0 @@
-@use '../../../../styles/abstracts/index' as a;
-
-.controller_nav {
-    @include a.flex(flex-end, center);
-}

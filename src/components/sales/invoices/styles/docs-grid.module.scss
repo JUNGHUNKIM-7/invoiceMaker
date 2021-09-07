@@ -1,8 +1,8 @@
-@use '../../../../styles/abstracts/index' as a;
-@use '../docs-component/styles/PI.module' as pi;
-@use '../docs-component/styles/CI.module' as ci;
-@use '../docs-component/styles/body.module' as b;
-@use '../docs-component/styles/footer.module' as f;
+@use '../../../../../styles/abstracts/index' as a;
+@use '../../sub-components/invoices/styles/header-PI.module' as pi;
+@use '../../sub-components/invoices/styles/header-CI.module' as ci;
+@use '../../sub-components/invoices/styles/body.module' as b;
+@use '../../sub-components/invoices/styles/footer.module' as f;
 
 .gridWrapper {
     @include a.grid(1, 1, 0) {

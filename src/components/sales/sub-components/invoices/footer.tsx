@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import l from '../styles/docs-grid.module.scss'
+import l from '../../invoices/styles/docs-grid.module.scss'
 
 const Footer: NextPage = () => {
     return (

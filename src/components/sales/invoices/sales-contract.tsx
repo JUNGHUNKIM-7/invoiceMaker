@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import HeaderPI from '../docs-component/header-PI'
-import Body from '../docs-component/body'
-import Footer from '../docs-component/footer'
+import HeaderPI from '../sub-components/invoices/header-PI'
+import Body from '../sub-components/invoices/body'
+import Footer from '../sub-components/invoices/footer'
 import { PageProps } from '../docsRoute'
-import l from '../styles/docs-grid.module.scss'
+import l from './styles/docs-grid.module.scss'
 
 const SalesContract: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
     return (

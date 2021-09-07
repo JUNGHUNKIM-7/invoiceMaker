@@ -6,7 +6,7 @@ import SalesContract from './invoices/sales-contract'
 import Quotation from './quotes/quotation'
 import RequestForQuotation from './quotes/request-for-quotation'
 import PurchaseOrder from './purchase-order/purchase-order'
-import DocsLayout from './docs-component/docs-layout'
+import DocsLayout from './invoices/docs-layout'
 
 export interface PageProps {
     page: string

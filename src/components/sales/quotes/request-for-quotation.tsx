@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { PageProps } from '../docsRoute'
-import l from '../styles/docs-grid.module.scss'
+import l from '../invoices/styles/docs-grid.module.scss'
 
 const RequestForQuotation: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
     return (

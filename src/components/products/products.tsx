@@ -1,12 +1,11 @@
 import type { NextPage } from 'next'
-import DocsLayout from '../docs-component/docs-layout'
+import DocsLayout from '../sales/invoices/docs-layout'
 
-const Contacts: NextPage = () => {
+const Products: NextPage = () => {
     return (
         <DocsLayout>
             <div>contact</div>
         </DocsLayout>
     )
 }
-
-export default Contacts
+export default Products

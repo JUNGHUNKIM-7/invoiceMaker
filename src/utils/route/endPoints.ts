@@ -2,11 +2,7 @@ export const endPoint = {
     // /invoices/invoice/[data]
     sales: {
         invoices: {
-            data: [
-                'commercial-invoice',
-                'proforma-invoice',
-                'invoices-contract',
-            ],
+            data: ['commercial-invoice', 'proforma-invoice', 'sales-contract'],
         },
         quotes: {
             data: ['quotation', 'request-for-quotation'],

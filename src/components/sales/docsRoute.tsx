@@ -10,10 +10,10 @@ import DocsLayout from './docs-component/docs-layout'
 
 export interface PageProps {
     page: string
-    title?: string | undefined
+    title: string | undefined
 }
 
-const DocsRoute: NextPage<PageProps> = ({ page }) => {
+const DocsRoute: NextPage<Pick<PageProps, 'page'>> = ({ page }) => {
     const { p } = useRouting()
 
     if (page !== 'invoices' && page !== 'quotes') {
@@ -32,9 +32,7 @@ const DocsRoute: NextPage<PageProps> = ({ page }) => {
             {p && p[1] === 'proforma-invoice' && (
                 <ProformaInvoice title={p?.[1]} />
             )}
-            {p && p[1] === 'invoices-contract' && (
-                <SalesContract title={p?.[1]} />
-            )}
+            {p && p[1] === 'sales-contract' && <SalesContract title={p?.[1]} />}
             {p && p[1] === 'quotation' && <Quotation title={p?.[1]} />}
             {p && p[1] === 'request-for-quotation' && (
                 <RequestForQuotation title={p?.[1]} />

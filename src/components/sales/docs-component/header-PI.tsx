@@ -4,7 +4,7 @@ import l from '../styles/docs-grid.module.scss'
 const HeaderPI: NextPage = () => {
     return (
         <div className={l.gridWrapper__pageBody__mainHeaderPI}>
-            <div className={l.gridWrapper__pageBody__mainHeaderPI__left}>
+            <section className={l.gridWrapper__pageBody__mainHeaderPI__left}>
                 <div
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__left__header
@@ -28,7 +28,7 @@ const HeaderPI: NextPage = () => {
                         l.gridWrapper__pageBody__mainHeaderPI__left__footer
                     }
                 >
-                    <div>
+                    <article>
                         <div>
                             <label>method of dispatch</label>
                             <input />
@@ -38,9 +38,9 @@ const HeaderPI: NextPage = () => {
                             <label>port of loading</label>
                             <input />
                         </div>
-                    </div>
+                    </article>
 
-                    <div>
+                    <article>
                         <div>
                             <label>type of shipment</label>
                             <input />
@@ -50,16 +50,21 @@ const HeaderPI: NextPage = () => {
                             <label>port of discharge</label>
                             <input />
                         </div>
-                    </div>
+                    </article>
                 </div>
-            </div>
-            <div className={l.gridWrapper__pageBody__mainHeaderPI__right}>
+            </section>
+
+            <section className={l.gridWrapper__pageBody__mainHeaderPI__right}>
                 <div
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__right__header
                     }
                 >
-                    <div>
+                    <div
+                        className={
+                            l.gridWrapper__pageBody__mainHeaderPI__right__header__pages
+                        }
+                    >
                         <label>pages</label>
                         <p>1 of 1</p>
                     </div>
@@ -97,13 +102,10 @@ const HeaderPI: NextPage = () => {
                 >
                     <label>term / method of payment</label>
                     <div>
-                        <textarea>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit.
-                        </textarea>
+                        <textarea></textarea>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     )
 }

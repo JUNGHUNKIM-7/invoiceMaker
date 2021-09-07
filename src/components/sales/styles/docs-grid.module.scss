@@ -10,6 +10,7 @@
             't'
             'b';
     }
+
     &__title {
         grid-area: t;
         text-align: center;
@@ -19,6 +20,7 @@
 
     &__pageBody {
         grid-area: b;
+        border: 1px solid black;
 
         @include a.grid(1, 1, 0) {
             grid-template-areas:

@@ -11,9 +11,12 @@ const SalesContract: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
             <h3 className={l.gridWrapper__title}>
                 {title?.replaceAll('-', ' ')}
             </h3>
-            <HeaderPI />
-            <Body />
-            <Footer />
+
+            <div className={l.gridWrapper__pageBody}>
+                <HeaderPI />
+                <Body />
+                <Footer />
+            </div>
         </div>
     )
 }

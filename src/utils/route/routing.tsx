@@ -10,14 +10,18 @@ export const useRouting = () => {
     const routerBack = () => {
         router.back()
     }
-    const routerToHome = () => {
-        router.replace('/')
+    const routerReload = () => {
+        router.reload()
+    }
+    const routerReplace = (path: string) => {
+        router.replace(path)
     }
 
     return {
         p,
         routerPush,
         routerBack,
-        routerToHome,
+        routerReload,
+        routerReplace,
     }
 }

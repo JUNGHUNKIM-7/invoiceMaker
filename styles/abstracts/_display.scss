@@ -1,4 +1,4 @@
-@mixin grid($repeat: 0, $fr: 1, $gap: 2) {
+@mixin grid($repeat: 0, $fr: 1, $gap: 0) {
     display: grid;
     gap: #{$gap}rem;
     grid-template-columns: repeat(#{$repeat}, minmax(min-content, #{$fr}fr));
@@ -11,7 +11,7 @@
     $mainAxis: flex-start,
     $crossAxis: flex-start,
     $direction: row,
-    $gap: 1
+    $gap: 0
 ) {
     @if $direction != row {
         display: flex;

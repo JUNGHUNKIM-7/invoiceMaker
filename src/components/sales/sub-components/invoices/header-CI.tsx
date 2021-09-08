@@ -5,30 +5,30 @@ const HeaderCi: NextPage = () => {
     return (
         <div className={l.gridWrapper__pageBody__mainHeaderCI}>
             <section className={l.gridWrapper__pageBody__mainHeaderCI__left}>
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderCI__left__header
                     }
                 >
                     <label>seller</label>
                     <input />
-                </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderCI__left__body
                     }
                 >
                     <label>buyer</label>
                     <input />
-                </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderCI__left__footer
                     }
                 >
-                    <article>
+                    <div>
                         <div>
                             <label>method of dispatch</label>
                             <input />
@@ -38,9 +38,9 @@ const HeaderCi: NextPage = () => {
                             <label>port of loading</label>
                             <input />
                         </div>
-                    </article>
+                    </div>
 
-                    <article>
+                    <div>
                         <div>
                             <label>type of shipment</label>
                             <input />
@@ -50,12 +50,12 @@ const HeaderCi: NextPage = () => {
                             <label>port of discharge</label>
                             <input />
                         </div>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </section>
 
             <section className={l.gridWrapper__pageBody__mainHeaderCI__right}>
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderCI__right__header
                     }
@@ -84,27 +84,27 @@ const HeaderCi: NextPage = () => {
                             <input />
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderCI__right__body
                     }
                 >
                     <label>delivery date</label>
                     <input />
-                </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderCI__right__footer
                     }
                 >
                     <label>term / method of payment</label>
                     <div>
-                        <textarea rows={3}></textarea>
+                        <textarea></textarea>
                     </div>
-                </div>
+                </article>
             </section>
         </div>
     )

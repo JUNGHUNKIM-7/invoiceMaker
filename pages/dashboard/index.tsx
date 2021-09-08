@@ -3,7 +3,7 @@ import m from '../../src/components/dashboard/styles/dashBoard.module.scss'
 import BoardNav from '../../src/components/dashboard/board-nav'
 import BoardTop from '../../src/components/dashboard/board-top'
 import BoardRecentCards from '../../src/components/dashboard/board-recent-cards'
-import DashboardLayout from '../../src/components/dashboard/dashboard-layout'
+import DashboardLayout from '../../src/components/dashboard/sub-components/dashboard-layout'
 
 const Index: NextPage = () => {
     return (

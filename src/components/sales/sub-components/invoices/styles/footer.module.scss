@@ -4,9 +4,7 @@
     & {
         @include a.grid(4, 1, 0);
 
-        label {
-            text-transform: capitalize;
-        }
+
 
         &__left {
             grid-column: 1/3;
@@ -19,7 +17,6 @@
                 textarea {
                     width: 100%;
                     height: 90%;
-                    resize: none;
                 }
                 &:first-child {
                 }
@@ -40,27 +37,46 @@
                 }
                 &:first-child {
                 }
-
                 &:nth-child(2) {
                 }
-
                 &:nth-child(3) {
                 }
                 &:nth-child(4) {
                 }
-
                 &:nth-child(5) {
                 }
-
                 &:nth-child(6) {
                 }
-
                 &:last-child {
                 }
             }
 
-            &__flex{
-                @include a.flex();
+            &__incoterms {
+                > div {
+                    &:first-child {
+                        > div {
+                            input {
+                                width: 50%;
+                            }
+                            @include a.flex();
+                        }
+                    }
+                }
+            }
+
+            &__name {
+                @include a.flex(flex-start, flex-start, row, 0);
+                input {
+                    @include a.flex(flex-start, flex-start, row, 0);
+
+                    &:first-child {
+                        width: 30%;
+                    }
+
+                    &:last-child {
+                        width: 70%;
+                    }
+                }
             }
         }
     }

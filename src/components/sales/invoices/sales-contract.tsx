@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import HeaderPI from '../sub-components/invoices/header-PI'
-import Body from '../sub-components/invoices/body'
+import BodyPI from '../sub-components/invoices/body-PI'
 import Footer from '../sub-components/invoices/footer'
 import { PageProps } from '../docsRoute'
 import l from './styles/docs-grid.module.scss'
@@ -14,7 +14,7 @@ const SalesContract: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
 
             <div className={l.gridWrapper__pageBody}>
                 <HeaderPI />
-                <Body />
+                <BodyPI />
                 <Footer />
             </div>
         </div>

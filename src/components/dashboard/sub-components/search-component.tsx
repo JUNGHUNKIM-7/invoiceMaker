@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import b from './styles/dashBoard.module.scss'
+import b from '../styles/dashBoard.module.scss'
 import { HiDocumentSearch } from 'react-icons/hi'
 import SearchInputSubComponent from './search-input-sub-component'
 import SearchSelectionSubComponent from './search-selection-sub-component'

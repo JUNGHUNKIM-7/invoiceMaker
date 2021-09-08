@@ -6,15 +6,11 @@ import DocsRoute from '../../src/components/sales/docsRoute'
 const Sales: NextPage = () => {
     const { p } = useRouting()
 
-    if (p && p[0]) {
-        return <DocsRoute page={p[0]} />
+    if (!p) {
+        return <Custom404 />
     }
 
-    return (
-        <div>
-            <Custom404 />
-        </div>
-    )
+    return <DocsRoute page={p[0]} />
 }
 
 export default Sales

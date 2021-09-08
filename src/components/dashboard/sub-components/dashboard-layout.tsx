@@ -3,9 +3,9 @@ import { IoIosContact } from 'react-icons/io'
 import {
     GlobalActionEnum,
     UseGlobalReducer,
-} from '../../utils/reducer/globalState'
+} from '../../../utils/reducer/globalState'
 import { RiMoonClearLine, RiSunFill } from 'react-icons/ri'
-import l from './styles/dashboard-layout.module.scss'
+import l from '../styles/dashboard-layout.module.scss'
 
 const DashboardLayout: NextPage = ({ children }) => {
     const {

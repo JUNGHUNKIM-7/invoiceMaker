@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import React, { useState } from 'react'
-import b from './styles/dashBoard.module.scss'
+import b from '../styles/dashBoard.module.scss'
 import { AiOutlineStar, AiFillStar } from 'react-icons/ai'
 
 const CardComponent: NextPage = () => {

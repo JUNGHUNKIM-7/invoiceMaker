@@ -5,30 +5,34 @@ const HeaderPI: NextPage = () => {
     return (
         <div className={l.gridWrapper__pageBody__mainHeaderPI}>
             <section className={l.gridWrapper__pageBody__mainHeaderPI__left}>
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__left__header
                     }
                 >
                     <label>seller</label>
-                    <input />
-                </div>
+                    <div>
+                        <textarea></textarea>
+                    </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__left__body
                     }
                 >
                     <label>buyer</label>
-                    <input />
-                </div>
+                    <div>
+                        <textarea></textarea>
+                    </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__left__footer
                     }
                 >
-                    <article>
+                    <div>
                         <div>
                             <label>method of dispatch</label>
                             <input />
@@ -38,9 +42,9 @@ const HeaderPI: NextPage = () => {
                             <label>port of loading</label>
                             <input />
                         </div>
-                    </article>
+                    </div>
 
-                    <article>
+                    <div>
                         <div>
                             <label>type of shipment</label>
                             <input />
@@ -50,12 +54,12 @@ const HeaderPI: NextPage = () => {
                             <label>port of discharge</label>
                             <input />
                         </div>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </section>
 
             <section className={l.gridWrapper__pageBody__mainHeaderPI__right}>
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__right__header
                     }
@@ -66,7 +70,7 @@ const HeaderPI: NextPage = () => {
                         }
                     >
                         <label>pages</label>
-                        <p>1 of 1</p>
+                        <label>1 of 1</label>
                     </div>
 
                     <div
@@ -84,18 +88,18 @@ const HeaderPI: NextPage = () => {
                             <input />
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__right__body
                     }
                 >
                     <label>delivery date</label>
                     <input />
-                </div>
+                </article>
 
-                <div
+                <article
                     className={
                         l.gridWrapper__pageBody__mainHeaderPI__right__footer
                     }
@@ -104,7 +108,7 @@ const HeaderPI: NextPage = () => {
                     <div>
                         <textarea></textarea>
                     </div>
-                </div>
+                </article>
             </section>
         </div>
     )

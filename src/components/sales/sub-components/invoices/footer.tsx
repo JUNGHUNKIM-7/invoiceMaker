@@ -9,6 +9,7 @@ const Footer: NextPage = () => {
                     <label>conditions</label>
                     <textarea></textarea>
                 </div>
+
                 <div>
                     <label>bank details</label>
                     <textarea></textarea>
@@ -31,16 +32,23 @@ const Footer: NextPage = () => {
                     <input />
                 </div>
 
-                <div>
+                <div
+                    className={
+                        l.gridWrapper__pageBody__footer__right__incoterms
+                    }
+                >
                     <div>
                         <label>incoterms 2020</label>
-                        <input />
+                        <div>
+                            <input />
+                            <input />
+                        </div>
                     </div>
+                </div>
 
-                    <div>
-                        <label>currency</label>
-                        <input />
-                    </div>
+                <div>
+                    <label>currency</label>
+                    <input />
                 </div>
 
                 <div>
@@ -51,7 +59,7 @@ const Footer: NextPage = () => {
                 <div>
                     <label>name of authorized signatory</label>
                     <div
-                        className={l.gridWrapper__pageBody__footer__right__flex}
+                        className={l.gridWrapper__pageBody__footer__right__name}
                     >
                         <input />
                         <input />

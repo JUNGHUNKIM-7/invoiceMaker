@@ -7,13 +7,17 @@
 
         @include c.button();
         @include c.link();
-        @include c.input();
+        @include c.input(light, normal);
+
+        @content;
     } @else {
         background-color: var(--dark-bg);
         color: var(--dark-font);
 
         @include c.button(dark);
         @include c.link(dark);
-        @include c.input(dark);
+        @include c.input(dark, normal);
+
+        @content;
     }
 }

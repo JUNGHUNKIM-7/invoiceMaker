@@ -1,7 +1,9 @@
 @use '../../../../../styles/abstracts/index' as a;
-@use '../../sub-components/invoices/styles/header-PI.module' as pi;
-@use '../../sub-components/invoices/styles/header-CI.module' as ci;
-@use '../../sub-components/invoices/styles/body.module' as b;
+@use '../../../../../styles/components/input' as c;
+@use '../../sub-components/invoices/styles/header-PI.module' as headerPi;
+@use '../../sub-components/invoices/styles/header-CI.module' as headerCi;
+@use '../../sub-components/invoices/styles/body-PI.module' as bodyPi;
+@use '../../sub-components/invoices/styles/body-CI.module' as bodyCi;
 @use '../../sub-components/invoices/styles/footer.module' as f;
 
 .gridWrapper {
@@ -22,6 +24,15 @@
         grid-area: b;
         border: 1px solid black;
 
+        //global
+        label {
+            display: block;
+            margin-bottom: .5em;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+
         @include a.grid(1, 1, 0) {
             grid-template-areas:
                 'h'
@@ -29,21 +40,23 @@
                 'f';
         }
 
+        //local
         &__mainHeaderPI {
             grid-area: h;
-            @include pi.mainHeaderPI;
+            @include headerPi.mainHeaderPI;
         }
-
         &__mainHeaderCI {
             grid-area: h;
-            @include ci.mainHeaderCI;
+            @include headerCi.mainHeaderCI;
         }
-
-        &__body {
+        &__mainBodyPI {
             grid-area: b;
-            @include b.mainBody;
+            @include bodyPi.mainBodyPI;
         }
-
+        &__mainBodyCI {
+            grid-area: b;
+            @include bodyCi.mainBodyCI;
+        }
         &__footer {
             grid-area: f;
             @include f.mainFooter;

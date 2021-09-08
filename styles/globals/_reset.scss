@@ -127,14 +127,13 @@ ol {
     list-style: none;
 }
 
-table {
-    @include c.table();
+textarea {
+    resize: none;
+    background-color: var(--light-bg);
+    border: 1px solid var(--input-light-border);
 }
 
-label + input {
-    display: block;
-}
-
-label + button {
+label + input,
+label + input ~ input {
     display: block;
 }

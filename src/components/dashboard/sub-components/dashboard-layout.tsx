@@ -21,7 +21,7 @@ const DashboardLayout: NextPage = ({ children }) => {
                     <i>
                         <IoIosContact size={25} />
                     </i>
-                    <p>user</p>
+                    <p>username</p>
                 </div>
                 <button
                     className={l.dashBoardLayout__toggle}

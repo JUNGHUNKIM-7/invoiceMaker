@@ -1,0 +1,46 @@
+@use '../../../../styles/abstracts' as a;
+@use '../styles/home-nav.module' as n;
+@use '../styles/home-body.module' as b;
+@use '../styles/home-footer.module' as f;
+
+.home {
+    @include a.grid(5, 1, 1) {
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            'n n n n n'
+            'b b b b b'
+            'f f f f f';
+    }
+
+    &__nav {
+        grid-area: n;
+        @include n.home-nav();
+    }
+    &__body {
+        grid-area: b;
+        @include b.home-body();
+    }
+    &__footer {
+        grid-area: f;
+        @include f.home-footer();
+    }
+
+    @include a.mq-tablet() {
+        @include a.grid(8, 1, 2) {
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                'n n n n n n n n'
+                'b b b b b b b b'
+                'f f f f f f f f';
+        }
+    }
+    @include a.mq-desktop() {
+        @include a.grid(12, 1, 2) {
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                'n n n n n n n n n n n n'
+                'b b b b b b b b b b b b'
+                'f f f f f f f f f f f f';
+        }
+    }
+}

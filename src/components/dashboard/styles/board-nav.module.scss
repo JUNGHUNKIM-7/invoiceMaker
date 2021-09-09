@@ -1,0 +1,81 @@
+@use '../../../../styles/abstracts' as a;
+
+@mixin board-nav() {
+    border: 2px solid #d6d3d1;
+    border-radius: 5px;
+    padding: 1em;
+    min-width: min-content;
+    max-width: available;
+    position: relative;
+
+    &__hidden_nav {
+        display: grid;
+        grid-template-rows: auto 1fr;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        height: max-content;
+        width: max-content;
+
+        border-radius: 5px;
+        background-color: #292524;
+        color: #f9fafb;
+        opacity: 0.95;
+
+        div {
+            margin: 1em;
+            justify-self: end;
+        }
+        ul {
+            padding: 2em;
+            justify-self: center;
+            align-self: start;
+
+            li {
+                cursor: pointer;
+                &:not(:first-child) {
+                    margin-top: 2em;
+                }
+            }
+            @include a.mq-desktop {
+                align-self: center;
+            }
+        }
+    }
+
+    &__navComponent {
+        height: 100%;
+
+        &__navi_lists {
+            margin-top: 1em;
+            li {
+                margin-bottom: 1.5em;
+                a {
+                    display: block;
+                }
+                @include a.flex(flex-start, center, column);
+
+                a {
+                    font-size: clamp(0.8em, 2vw, 1em);
+                    font-weight: 500;
+
+                    &:hover {
+                        color: #71717a;
+                    }
+                }
+
+                @include a.mq-desktop {
+                    margin-bottom: 0;
+                    @include a.flex(flex-start, center, row, 0.5);
+                }
+            }
+            @include a.mq-desktop {
+                margin-top: 0;
+                @include a.flex(flex-start, center, row, 4);
+            }
+        }
+    }
+}

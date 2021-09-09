@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import React, { useState } from 'react'
-import b from '../styles/dashBoard.module.scss'
+import b from '../styles/dash-board.module.scss'
 import { AiOutlineStar, AiFillStar } from 'react-icons/ai'
 
 const CardComponent: NextPage = () => {
@@ -40,7 +40,7 @@ const CardComponent: NextPage = () => {
                 <React.Fragment key={idx}>
                     <article
                         className={
-                            b.boardMain__cardWrapper__cardComponents__cardComponent
+                            b.board__cardWrapper__cardComponents__cardComponent
                         }
                     >
                         <div>

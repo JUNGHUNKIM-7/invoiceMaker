@@ -1,6 +1,6 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import b from '../styles/dashBoard.module.scss'
+import b from '../styles/dash-board.module.scss'
 import { useState } from 'react'
 import { useRouting } from '../../../utils/route/routing'
 import {
@@ -32,7 +32,7 @@ const NavComponent: NextPage = () => {
     return (
         <>
             {invoiceToggle && (
-                <nav className={b.boardMain__navWrapper__hidden_nav}>
+                <nav className={b.board__navWrapper__hidden_nav}>
                     <div onClick={() => setInvoiceToggle((prev) => !prev)}>
                         <AiOutlineCloseCircle size={25} />
                     </div>
@@ -52,7 +52,7 @@ const NavComponent: NextPage = () => {
                 </nav>
             )}
             {quoteToggle && (
-                <nav className={b.boardMain__navWrapper__hidden_nav}>
+                <nav className={b.board__navWrapper__hidden_nav}>
                     <div onClick={() => setQuoteToggle((prev) => !prev)}>
                         <AiOutlineCloseCircle size={25} />
                     </div>
@@ -71,12 +71,8 @@ const NavComponent: NextPage = () => {
                     </ul>
                 </nav>
             )}
-            <nav className={b.boardMain__navWrapper__navComponent}>
-                <ul
-                    className={
-                        b.boardMain__navWrapper__navComponent__navi_lists
-                    }
-                >
+            <nav className={b.board__navWrapper__navComponent}>
+                <ul className={b.board__navWrapper__navComponent__navi_lists}>
                     <li onClick={() => setInvoiceToggle((prev) => !prev)}>
                         <HiDocumentAdd size={25} />
                         <a>invoices</a>
@@ -101,10 +97,6 @@ const NavComponent: NextPage = () => {
                     <li onClick={() => routerPush(`/${products.data}`)}>
                         <RiFileList3Fill size={25} />
                         <a>products</a>
-                    </li>
-                    <li>
-                        <FaShareAlt size={25} />
-                        <a>share</a>
                     </li>
                 </ul>
             </nav>

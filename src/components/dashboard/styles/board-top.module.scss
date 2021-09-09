@@ -1,0 +1,72 @@
+@use '../../../../styles/abstracts' as a;
+
+@mixin board-top() {
+    border: 2px solid #d6d3d1;
+    border-radius: 5px;
+    padding: 1em;
+
+    h4 {
+        width: max-content;
+        border-spacing: 2em;
+        border-bottom: 1px dashed;
+        margin-bottom: 1em;
+        padding: 0.5em 0;
+    }
+
+    &__search {
+        height: 100%;
+
+        &__input {
+            @include a.flex(center, center, row, 2);
+
+            div {
+                flex: 1;
+
+                input {
+                    height: 2em;
+                }
+            }
+        }
+        &__selection {
+            margin-top: 2em;
+
+            &__from_to {
+                @include a.flex(flex-end, center, row, 1);
+
+                span {
+                    margin-left: 0.5em;
+
+                    label {
+                        margin-right: 0.5em;
+                        font-size: clamp(1.4rem, 2vw, 1.6rem);
+                    }
+                }
+
+                @include a.mq-desktop {
+                    @include a.flex(center, center, row, 2);
+                    span {
+                        margin-left: 2em;
+
+                        label {
+                            margin-right: 1em;
+                        }
+                    }
+                }
+            }
+        }
+        &__btnWrapper {
+            margin-top: 1.5em;
+            @include a.flex(center, center);
+
+            button {
+                div {
+                    @include a.flex(center, center);
+                }
+            }
+
+            @include a.mq-desktop {
+                margin-top: 3em;
+            }
+        }
+    }
+}

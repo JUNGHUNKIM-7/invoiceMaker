@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import b from '../styles/dashBoard.module.scss'
+import b from '../styles/dash-board.module.scss'
 import React, { useState } from 'react'
 
 const SearchSelectionSubComponent: NextPage = () => {
@@ -19,10 +19,8 @@ const SearchSelectionSubComponent: NextPage = () => {
     }
 
     return (
-        <div className={b.boardMain__topWrapper__search__selection}>
-            <div
-                className={b.boardMain__topWrapper__search__selection__from_to}
-            >
+        <div className={b.board__topWrapper__search__selection}>
+            <div className={b.board__topWrapper__search__selection__from_to}>
                 <div>
                     <span>
                         <label htmlFor="from">from</label>

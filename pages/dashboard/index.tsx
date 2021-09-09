@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
-import m from '../../src/components/dashboard/styles/dashBoard.module.scss'
+import m from '../../src/components/dashboard/styles/dash-board.module.scss'
 import DashboardLayout from '../../src/components/dashboard/sub-components/dashboard-layout'
-import Dashboard from '../../src/components/dashboard/dashboard'
+import DashBoard from '../../src/components/dashboard/dash-board'
 
 const Index: NextPage = () => {
     return (
         <DashboardLayout>
-            <main className={m.boardMain}>
-                <Dashboard />
+            <main>
+                <DashBoard />
             </main>
         </DashboardLayout>
     )

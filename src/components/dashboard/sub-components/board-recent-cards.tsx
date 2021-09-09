@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import b from './styles/dashBoard.module.scss'
-import CardComponent from './sub-components/card-component'
+import b from '../styles/dashBoard.module.scss'
+import CardComponent from './card-component'
 
 const BoardRecentCards: NextPage = () => {
     return (

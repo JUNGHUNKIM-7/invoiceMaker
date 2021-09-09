@@ -1,17 +1,13 @@
 import type { NextPage } from 'next'
 import m from '../../src/components/dashboard/styles/dashBoard.module.scss'
-import BoardNav from '../../src/components/dashboard/board-nav'
-import BoardTop from '../../src/components/dashboard/board-top'
-import BoardRecentCards from '../../src/components/dashboard/board-recent-cards'
 import DashboardLayout from '../../src/components/dashboard/sub-components/dashboard-layout'
+import Dashboard from '../../src/components/dashboard/dashboard'
 
 const Index: NextPage = () => {
     return (
         <DashboardLayout>
             <main className={m.boardMain}>
-                <BoardNav />
-                <BoardTop />
-                <BoardRecentCards />
+                <Dashboard />
             </main>
         </DashboardLayout>
     )

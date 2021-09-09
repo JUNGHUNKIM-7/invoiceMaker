@@ -78,16 +78,12 @@ const NavComponent: NextPage = () => {
                     }
                 >
                     <li onClick={() => setInvoiceToggle((prev) => !prev)}>
-                        <i>
-                            <HiDocumentAdd size={25} />
-                        </i>
+                        <HiDocumentAdd size={25} />
                         <a>invoices</a>
                     </li>
 
                     <li onClick={() => setQuoteToggle((prev) => !prev)}>
-                        <i>
-                            <HiDocumentReport size={25} />
-                        </i>
+                        <HiDocumentReport size={25} />
                         <a>quotes</a>
                     </li>
                     <li
@@ -95,27 +91,19 @@ const NavComponent: NextPage = () => {
                             routerPush(`/sales/${purchaseOrder.data}`)
                         }
                     >
-                        <i>
-                            <HiDocumentSearch size={25} />
-                        </i>
-                        <a>purchase orders</a>
+                        <HiDocumentSearch size={25} />
+                        <a>po</a>
                     </li>
                     <li onClick={() => routerPush(`/${contacts.data}`)}>
-                        <i>
-                            <RiContactsBookFill size={25} />
-                        </i>
+                        <RiContactsBookFill size={25} />
                         <a>contacts</a>
                     </li>
                     <li onClick={() => routerPush(`/${products.data}`)}>
-                        <i>
-                            <RiFileList3Fill size={25} />
-                        </i>
+                        <RiFileList3Fill size={25} />
                         <a>products</a>
                     </li>
                     <li>
-                        <i>
-                            <FaShareAlt size={25} />
-                        </i>
+                        <FaShareAlt size={25} />
                         <a>share</a>
                     </li>
                 </ul>

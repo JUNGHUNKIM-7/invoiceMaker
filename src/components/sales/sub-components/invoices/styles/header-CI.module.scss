@@ -1,38 +1,45 @@
 @use '../../../../../../styles/abstracts/index' as a;
 
+//todo Form Input Styling
 @mixin mainHeaderCI {
     & {
         @include a.grid(4, 1, 0);
-        border-bottom: 1px solid black;
-
-
-
-        input {
-            width: 100%;
-        }
+        border-bottom: 1px solid ;
 
         &__left {
             grid-column: 1/3;
             grid-row: 1/2;
-            border-right: 1px solid black;
-
+            border-right: 1px solid ;
             @include a.grid(1, 1, 0) {
-                grid-template-rows: repeat(3, 1fr);
+                grid-template-rows: 0.5fr 0.5fr 1fr;
             }
 
             &__header {
                 padding: 1em;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid ;
+                div {
+                    height: 100%;
+                    textarea {
+                        width: 100%;
+                        height: 70%;
+                    }
+                }
             }
 
             &__body {
                 padding: 1em;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid ;
+                div {
+                    height: 100%;
+                    textarea {
+                        width: 100%;
+                        height: 70%;
+                    }
+                }
             }
 
             &__footer {
                 padding: 1em;
-
                 @include a.mq-tablet {
                     @include a.grid(2, 1, 2) {
                         grid-template-rows: 1fr 1fr;
@@ -58,21 +65,20 @@
             grid-row: 1/2;
 
             @include a.grid(1, 1, 0) {
-                grid-template-rows: repeat(3, 1fr);
+                grid-template-rows: 0.5fr 0.5fr 1fr;
             }
 
             &__header {
                 padding: 1em;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid ;
 
                 &__pages {
                     width: 100%;
-                    @include a.flex(flex-end, center);
+                    @include a.flex(flex-end, center, row, 2);
                 }
 
                 &__flex {
                     width: 100%;
-
                     @include a.mq-tablet {
                         @include a.grid(2, 1, 2);
                     }
@@ -81,16 +87,18 @@
 
             &__body {
                 padding: 1em;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid ;
             }
 
             &__footer {
                 padding: 1em;
 
                 div {
+                    height: 100%;
+
                     textarea {
                         width: 100%;
-                        height: 100%;
+                        height: 85%;
                     }
                 }
             }

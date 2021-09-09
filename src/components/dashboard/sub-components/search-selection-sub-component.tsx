@@ -18,7 +18,6 @@ const SearchSelectionSubComponent: NextPage = () => {
         return years
     }
 
-    //todo select!
     return (
         <div className={b.boardMain__topWrapper__search__selection}>
             <div

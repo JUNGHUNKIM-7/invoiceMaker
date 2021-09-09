@@ -28,12 +28,12 @@
 
         &__right {
             grid-column: 3/-1;
-            border-left: 1px solid black;
+            border-left: 1px solid ;
 
             > div {
                 padding: 1em;
                 &:not(:last-child) {
-                    border-bottom: 1px solid black;
+                    border-bottom: 1px solid ;
                 }
                 &:first-child {
                 }

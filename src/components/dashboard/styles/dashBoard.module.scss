@@ -5,11 +5,11 @@
     @include a.grid(5, 1, 1) {
         grid-template-areas:
             'n t t t t'
-            'n r r r r'
-            'c c c c c';
+            'n r r r r';
     }
 
-    padding: 1em;
+    margin: 0 2em;
+
     & button {
         display: block;
     }
@@ -25,81 +25,71 @@
         position: relative;
 
         &__hidden_nav {
-            background-color: #292524;
-            color: #f9fafb;
-            opacity: 0.95;
-            height: 100%;
-            width: 50vw;
+            display: grid;
+            grid-template-rows: auto 1fr;
+
             position: absolute;
             top: 0;
             left: 0;
             z-index: 1;
-            display: grid;
-            grid-template-rows: auto 1fr;
+
+            height: max-content;
+            width: max-content;
+
             border-radius: 5px;
+            background-color: #292524;
+            color: #f9fafb;
+            opacity: 0.95;
 
             div {
                 margin: 1em;
                 justify-self: end;
             }
             ul {
-                text-align: center;
+                padding: 2em;
                 justify-self: center;
-                align-self: center;
+                align-self: start;
 
                 li {
                     cursor: pointer;
                     &:not(:first-child) {
-                        margin-top: 3em;
+                        margin-top: 2em;
                     }
                 }
-            }
-
-            @include a.mq-tablet {
-                width: 30vw;
-            }
-            @include a.mq-desktop {
-                width: 100%;
+                @include a.mq-desktop {
+                    align-self: center;
+                }
             }
         }
 
         &__navComponent {
             height: 100%;
-            @include a.flex(flex-start, center, column);
 
             &__navi_lists {
                 li {
-                    &:not(:first-child) {
-                        margin-top: 1em;
-                    }
-
-                    i {
-                        display: block;
-                    }
+                    margin-bottom: 1.5em;
                     a {
                         display: block;
+                    }
+                    @include a.flex(flex-start, center, column);
+
+                    a {
                         font-size: clamp(0.8em, 2vw, 1em);
                         font-weight: 500;
-                        text-align: center;
 
                         &:hover {
                             color: #71717a;
                         }
                     }
-                    @include a.flex(center, center, column, 0);
 
                     @include a.mq-desktop {
-                        @include a.flex(flex-start, center, row, 0);
-                        padding-left: 1em;
-
-                        a {
-                            margin-left: 1em;
-                        }
+                        margin-bottom: 0;
+                        @include a.flex(flex-start, center, row, 0.5);
                     }
                 }
-            }
-            @include a.mq-desktop {
-                @include a.flex(center, center, column);
+                @include a.mq-desktop {
+                    @include a.flex(flex-start, center, row, 4);
+                }
             }
         }
     }
@@ -112,13 +102,12 @@
         padding: 1em;
 
         h4 {
-            border-bottom: 1px dashed black;
+            border-bottom: 1px dashed;
             margin-bottom: 1em;
         }
 
         &__search {
             height: 100%;
-
 
             &__input {
                 @include a.flex(center, center, row, 2);
@@ -178,7 +167,7 @@
         padding: 1em;
 
         h4 {
-            border-bottom: 1px dashed black;
+            border-bottom: 1px dashed;
             margin-bottom: 1em;
         }
 
@@ -240,17 +229,18 @@
         @include a.grid(8, 1, 2) {
             grid-template-areas:
                 'n n t t t t t t'
-                'n n r r r r r r'
-                'c c c c c c c c';
+                'n n r r r r r r';
         }
+        margin: 0 4em;
     }
     //>Desktop
     @include a.mq-desktop {
         @include a.grid(12, 1, 2) {
             grid-template-areas:
-                'n n n t t t t t t t t t'
-                'n n n r r r r r r r r r'
-                'c c c c c c c c c c c c';
+                'n n n n n n n n n n n n'
+                't t t t t t t t t t t t'
+                'r r r r r r r r r r r r';
         }
+        margin: 0 6em;
     }
 }

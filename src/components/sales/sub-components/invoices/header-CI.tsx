@@ -11,7 +11,9 @@ const HeaderCi: NextPage = () => {
                     }
                 >
                     <label>seller</label>
-                    <input />
+                    <div>
+                        <textarea></textarea>
+                    </div>
                 </article>
 
                 <article
@@ -20,7 +22,9 @@ const HeaderCi: NextPage = () => {
                     }
                 >
                     <label>buyer</label>
-                    <input />
+                    <div>
+                        <textarea></textarea>
+                    </div>
                 </article>
 
                 <article
@@ -66,7 +70,7 @@ const HeaderCi: NextPage = () => {
                         }
                     >
                         <label>pages</label>
-                        <p>1 of 1</p>
+                        <label>1 of 1</label>
                     </div>
 
                     <div

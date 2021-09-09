@@ -2,7 +2,7 @@
 
 .dashBoardLayout {
     @include a.flex(space-between, center);
-    padding: 1em 1em 0 1em;
+    margin: 3em 6em 3em 6em;
 
     > div {
         @include a.flex(flex-start, center);

@@ -4,19 +4,21 @@
     @if $dark == false {
         background-color: var(--light-bg);
         color: var(--light-font);
+        border-color: #292524;
 
         @include c.button();
         @include c.link();
-        @include c.input(light, normal);
+        @include c.input();
 
         @content;
     } @else {
         background-color: var(--dark-bg);
         color: var(--dark-font);
+        border-color: #adbac7;
 
         @include c.button(dark);
         @include c.link(dark);
-        @include c.input(dark, normal);
+        @include c.input(dark);
 
         @content;
     }

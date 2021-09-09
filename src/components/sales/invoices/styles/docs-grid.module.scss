@@ -1,5 +1,5 @@
-@use '../../../../../styles/abstracts/index' as a;
-@use '../../../../../styles/components/input' as c;
+@use '../../../../../styles/abstracts' as a;
+@use '../../../../../styles/components' as c;
 @use '../../sub-components/invoices/styles/header-PI.module' as headerPi;
 @use '../../sub-components/invoices/styles/header-CI.module' as headerCi;
 @use '../../sub-components/invoices/styles/body-PI.module' as bodyPi;
@@ -13,6 +13,8 @@
             'b';
     }
 
+    @include c.formInput();
+
     &__title {
         grid-area: t;
         text-align: center;
@@ -22,16 +24,15 @@
 
     &__pageBody {
         grid-area: b;
-        border: 1px solid black;
+        border: 1px solid;
 
         //global
         label {
             display: block;
-            margin-bottom: .5em;
+            margin-bottom: 0.5em;
             font-weight: 500;
             text-transform: capitalize;
         }
-
 
         @include a.grid(1, 1, 0) {
             grid-template-areas:

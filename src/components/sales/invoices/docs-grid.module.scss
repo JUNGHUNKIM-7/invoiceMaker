@@ -1,0 +1,66 @@
+@use '../../../styles/abstracts/index' as a;
+@use '../../../styles/components/index' as c;
+@use 'modules/header-PI.module' as headerPi;
+@use 'modules/header-CI.module' as headerCi;
+@use 'modules/body-PI.module' as bodyPi;
+@use 'modules/body-CI.module' as bodyCi;
+@use 'modules/footer.module' as f;
+
+.gridWrapper {
+    @include a.grid(1, 1, 0) {
+        grid-template-areas:
+            't'
+            'b';
+    }
+
+    @include c.formInput();
+
+    &__title {
+        grid-area: t;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 2em;
+    }
+
+    &__pageBody {
+        grid-area: b;
+        border: 1px solid;
+
+        //global
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        @include a.grid(1, 1, 0) {
+            grid-template-areas:
+                'h'
+                'b'
+                'f';
+        }
+
+        //local
+        &__mainHeaderPI {
+            grid-area: h;
+            @include headerPi.mainHeaderPI;
+        }
+        &__mainHeaderCI {
+            grid-area: h;
+            @include headerCi.mainHeaderCI;
+        }
+        &__mainBodyPI {
+            grid-area: b;
+            @include bodyPi.mainBodyPI;
+        }
+        &__mainBodyCI {
+            grid-area: b;
+            @include bodyCi.mainBodyCI;
+        }
+        &__footer {
+            grid-area: f;
+            @include f.mainFooter;
+        }
+    }
+}

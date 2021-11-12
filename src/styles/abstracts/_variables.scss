@@ -1,0 +1,85 @@
+@use 'functions' as *;
+
+$primary-font-stack: font-maker(
+    var(--font-family-primary),
+    var(--font-family-kor)
+);
+
+$secondary-font-stack: font-maker(
+    var(--font-family-secondary),
+    var(--font-family-kor)
+);
+
+$code-font-stack: font-maker(var(--font-family-code), var(--font-default-code));
+
+//BreakPoint
+$breakpoints: (
+    phone: 568px,
+    tablet: 768px,
+    desktop: 1024px,
+    wide: 1920px,
+);
+
+$font-settings: (
+    line-height: 1.6,
+    size-default: 62.5%,
+);
+
+$font-scales: (
+    h1: clamp(2.4em, 2vw, 2.6em),
+    h2: clamp(2.2em, 2vw, 2.4em),
+    h3: clamp(2em, 2vw, 2.2em),
+    h4: clamp(1.8em, 2vw, 2em),
+    li: clamp(1.6em, 2vw, 1.8em),
+    input: clamp(1.4em, 2vw, 1.6em),
+    label: clamp(1.2em, 2vw, 1.4em),
+    button: clamp(1.2em, 2vw, 1.4em),
+    th: clamp(1.2em, 2vw, 1.4em),
+    td: clamp(1.2em, 2vw, 1.4em),
+    p: clamp(1.2em, 2vw, 1.4em),
+    a: clamp(1em, 2vw, 1.2em),
+    span: clamp(1.2em, 2vw, 1.4em),
+    textarea: clamp(1.2em, 2vw, 1.4em),
+);
+
+$colors: (
+    dark: (
+        bg: #22272e,
+        font: #adbac7,
+    ),
+    light: (
+        bg: #f9fafb,
+        font: #292524,
+    ),
+    link: (
+        light: (
+            primary: inherit,
+            visited: #adbac7,
+        ),
+        dark: (
+            visited: darken(#adbac7, 40%),
+        ),
+    ),
+    input: (
+        light: (
+            border: #bdbdbd,
+            disabled: #57534e,
+            checked: #2563eb,
+        ),
+        dark: (
+            border: #bdbdbd,
+            text: #f9fafb,
+            disabled: darken(#adbac7, 40%),
+        ),
+    ),
+    button: (
+        light: (
+            bg: #f9fafb,
+            border: #adbac7,
+        ),
+        dark: (
+            bg: #444c56,
+            border: #bdbdbd,
+        ),
+    ),
+);

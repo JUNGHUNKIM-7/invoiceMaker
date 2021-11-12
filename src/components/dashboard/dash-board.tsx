@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
-import BoardNav from './sub-components/board-nav'
-import BoardTop from './sub-components/board-top'
-import BoardRecentCards from './sub-components/board-recent-cards'
-import m from './styles/dash-board.module.scss'
+import BoardNav from './modules/board-nav'
+import BoardTop from './modules/board-top'
+import BoardRecentCards from './modules/board-recent-cards'
+import m from './dash-board.module.scss'
 
 const DashBoard: NextPage = () => {
     return (

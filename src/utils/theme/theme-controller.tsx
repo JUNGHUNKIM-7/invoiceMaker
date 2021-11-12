@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import t from '../../../styles/theme-controller.module.scss'
+import t from '../../styles/theme-controller.module.scss'
 import { UseGlobalReducer } from '../reducer/globalState'
 
 const ThemeController: NextPage = ({ children }) => {

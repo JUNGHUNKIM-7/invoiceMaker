@@ -1,0 +1,9 @@
+@use 'abstracts/index' as a;
+
+.dark {
+    @include a.darkMode(true);
+}
+
+.light {
+    @include a.darkMode(false);
+}

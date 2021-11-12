@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useRouting } from '../../../utils/route/routing'
 import { BiLeftArrowCircle } from 'react-icons/bi'
-import p from './styles/docsLayout.module.scss'
+import p from './docsLayout.module.scss'
 
 const DocsLayout: NextPage = ({ children }) => {
     const { routerBack } = useRouting()

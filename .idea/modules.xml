@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/next-trade.iml" filepath="$PROJECT_DIR$/.idea/next-trade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/next_invoice.iml" filepath="$PROJECT_DIR$/.idea/next_invoice.iml" />
     </modules>
   </component>
 </project>

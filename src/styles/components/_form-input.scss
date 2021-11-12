@@ -1,0 +1,21 @@
+@use '../variables' as a;
+
+@mixin formInput($type: light, $layout: docs) {
+    & {
+        input,
+        textarea {
+            width: 100%;
+            height: 2em;
+            border-radius: 5px;
+            outline: none;
+
+            background-color: #e5e7eb;
+            border: 1px solid #e5e7eb;
+            color: black;
+
+            &:focus {
+                border: 3px solid #2563eb;
+            }
+        }
+    }
+}

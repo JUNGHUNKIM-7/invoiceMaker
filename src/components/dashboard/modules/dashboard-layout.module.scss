@@ -1,0 +1,21 @@
+@use '../../../styles/abstracts/index' as a;
+
+.dashBoardLayout {
+    @include a.flex(space-between, center);
+    padding: 3em 6em 3em 6em;
+
+    > div {
+        @include a.flex(flex-start, center, row, 1);
+        text-transform: uppercase;
+    }
+
+    &__toggle {
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @include a.mq-tablet {
+    }
+}

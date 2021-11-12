@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import { PageProps } from '../docsRoute'
-import Footer from '../sub-components/invoices/footer'
-import HeaderCi from '../sub-components/invoices/header-CI'
-import l from './styles/docs-grid.module.scss'
-import BodyCi from '../sub-components/invoices/body-CI'
+import { PageProps } from '../docs-router'
+import Footer from './modules/footer'
+import HeaderCi from './modules/header-CI'
+import l from './docs-grid.module.scss'
+import BodyCi from './modules/body-CI'
 
 const CommercialInvoice: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
     return (

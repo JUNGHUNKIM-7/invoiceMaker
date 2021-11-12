@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import { PageProps } from '../docsRoute'
-import l from '../invoices/styles/docs-grid.module.scss'
+import { PageProps } from '../docs-router'
+import l from '../invoices/docs-grid.module.scss'
 
 const PurchaseOrder: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
     return (

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import DocsRoute from '../../src/components/sales/docsRoute'
+import DocsRouter from '../../src/components/sales/docs-router'
 import Contacts from '../../src/components/contacts/contacts'
 
 const Index: NextPage = () => {

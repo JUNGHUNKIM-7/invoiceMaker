@@ -1,0 +1,26 @@
+@use '../../../styles/abstracts/index' as a;
+
+.pageWrapper {
+    padding: 0 1em 0 1em;
+
+    &__back {
+        padding: 2em 0 2em 0;
+        @include a.flex(space-between, center, row, 1);
+        margin-bottom: 4em;
+
+        &__btn {
+            @include a.flex(flex-start, center, row, 1);
+        }
+        p {
+            font-weight: 600;
+        }
+    }
+
+    @include a.mq-tablet {
+        padding: 0 5em 0 5em;
+    }
+
+    @include a.mq-desktop {
+        padding: 0 10em 0 10em;
+    }
+}

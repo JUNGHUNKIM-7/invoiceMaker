@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import { PageProps } from '../docsRoute'
-import HeaderPI from '../sub-components/invoices/header-PI'
-import BodyPI from '../sub-components/invoices/body-PI'
-import Footer from '../sub-components/invoices/footer'
-import l from './styles/docs-grid.module.scss'
+import { PageProps } from '../docs-router'
+import HeaderPI from './modules/header-PI'
+import BodyPI from './modules/body-PI'
+import Footer from './modules/footer'
+import l from './docs-grid.module.scss'
 
 const ProformaInvoice: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
     return (

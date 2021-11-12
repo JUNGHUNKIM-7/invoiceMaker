@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { useRouting } from '../../src/utils/route/routing'
 import Custom404 from '../404'
-import DocsRoute from '../../src/components/sales/docsRoute'
+import DocsRouter from '../../src/components/sales/docs-router'
 
 const Sales: NextPage = () => {
     const { p } = useRouting()
@@ -10,7 +10,7 @@ const Sales: NextPage = () => {
         return <Custom404 />
     }
 
-    return <DocsRoute page={p[0]} />
+    return <DocsRouter page={p[0]} />
 }
 
 export default Sales

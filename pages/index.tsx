@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import HomePage from '../src/components/home/home-page'
+import HomePage from '../src/wrappers/home-page'
 
 const Home: NextPage = () => {
     return (

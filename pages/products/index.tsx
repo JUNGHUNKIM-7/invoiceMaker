@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Products from '../../src/components/products/products'
+import Products from '../../src/wrappers/products'
 
 const Index: NextPage = () => {
     return (

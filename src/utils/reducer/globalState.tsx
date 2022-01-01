@@ -51,7 +51,7 @@ const globalReducer = (state: GlobalInitialType, action: GlobalActionType) => {
             return {
                 ...state,
                 bookMarked: state.bookMarked.filter(
-                    ({ id }) => (id as number) !== Number(action.key.id)
+                    ({ id }) => (id as number) !== Number(action.key.id),
                 ),
             }
         default:
@@ -59,7 +59,7 @@ const globalReducer = (state: GlobalInitialType, action: GlobalActionType) => {
     }
 }
 
-export const globalStore = () => {
+export const useGlobalStore = () => {
     const [state, dispatch] = useReducer(globalReducer, globalInitialState)
 
     return {
@@ -69,7 +69,7 @@ export const globalStore = () => {
 }
 
 const globalReducerContext = createContext<ReturnType<
-    typeof globalStore
+    typeof useGlobalStore
 > | null>(null)
 
 export const GlobalReducerProvider = ({
@@ -77,7 +77,7 @@ export const GlobalReducerProvider = ({
 }: {
     children: ReactNode
 }) => (
-    <globalReducerContext.Provider value={globalStore()}>
+    <globalReducerContext.Provider value={useGlobalStore()}>
         {children}
     </globalReducerContext.Provider>
 )

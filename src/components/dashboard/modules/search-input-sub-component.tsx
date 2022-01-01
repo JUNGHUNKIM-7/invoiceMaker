@@ -55,7 +55,7 @@ const SearchInputSubComponent: NextPage = () => {
 
             <div>
                 <label htmlFor={'search'}>search</label>
-                <input type="text" id={'search'} />
+                <input type='text' id={'search'} />
             </div>
         </div>
     )

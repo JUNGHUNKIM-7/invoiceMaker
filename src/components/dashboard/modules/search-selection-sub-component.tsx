@@ -23,10 +23,10 @@ const SearchSelectionSubComponent: NextPage = () => {
             <div className={b.board__topWrapper__search__selection__from_to}>
                 <div>
                     <span>
-                        <label htmlFor="from">from</label>
+                        <label htmlFor='from'>from</label>
                         <select
-                            id="from"
-                            name="month"
+                            id='from'
+                            name='month'
                             value={month}
                             onChange={(e) => setMonth(e.target.value)}
                         >
@@ -47,8 +47,8 @@ const SearchSelectionSubComponent: NextPage = () => {
 
                     <span>
                         <select
-                            id="from"
-                            name="year"
+                            id='from'
+                            name='year'
                             value={year}
                             onChange={(e) => setYear(e.target.value)}
                         >
@@ -63,10 +63,10 @@ const SearchSelectionSubComponent: NextPage = () => {
 
                 <div>
                     <span>
-                        <label htmlFor="to">to</label>
+                        <label htmlFor='to'>to</label>
                         <select
-                            id="to"
-                            name="month"
+                            id='to'
+                            name='month'
                             value={month}
                             onChange={(e) => setMonth(e.target.value)}
                         >
@@ -87,8 +87,8 @@ const SearchSelectionSubComponent: NextPage = () => {
 
                     <span>
                         <select
-                            id="to"
-                            name="year"
+                            id='to'
+                            name='year'
                             value={year}
                             onChange={(e) => setYear(e.target.value)}
                         >

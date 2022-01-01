@@ -1,4 +1,4 @@
-@use '../variables' as a;
+@use '../abstracts/variables' as a;
 
 @mixin input($type: light) {
     input {

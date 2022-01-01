@@ -1,5 +1,3 @@
-@use '../variables' as a;
-
 @mixin formInput($type: light, $layout: docs) {
     & {
         input,
@@ -8,7 +6,6 @@
             height: 2em;
             border-radius: 5px;
             outline: none;
-
             background-color: #e5e7eb;
             border: 1px solid #e5e7eb;
             color: black;

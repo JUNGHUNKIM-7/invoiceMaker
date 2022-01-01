@@ -2,7 +2,7 @@
 
 @mixin mainFooter {
     & {
-        @include a.grid(4, 1, 0);
+        @include a.grid(4, 1);
 
         &__left {
             grid-column: 1/3;

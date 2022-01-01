@@ -4,7 +4,7 @@
 @use '../components/home/home-footer.module' as f;
 
 .home {
-    @include a.grid(5, 1, 1) {
+    @include a.grid(5, 1) {
         grid-template-rows: auto 1fr auto;
         grid-template-areas:
             'n n n n n'
@@ -26,7 +26,7 @@
     }
 
     @include a.mq-tablet() {
-        @include a.grid(8, 1, 2) {
+        @include a.grid(8, 2) {
             grid-template-rows: auto 1fr auto;
             grid-template-areas:
                 'n n n n n n n n'
@@ -35,7 +35,7 @@
         }
     }
     @include a.mq-desktop() {
-        @include a.grid(12, 1, 2) {
+        @include a.grid(12, 2) {
             grid-template-rows: auto 1fr auto;
             grid-template-areas:
                 'n n n n n n n n n n n n'

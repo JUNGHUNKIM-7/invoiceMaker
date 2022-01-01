@@ -7,7 +7,7 @@
 @use '../components/docs/footer.module' as f;
 
 .gridWrapper {
-    @include a.grid(1, 1, 0) {
+    @include a.grid(1, 0) {
         grid-template-areas:
             't'
             'b';
@@ -34,7 +34,7 @@
             text-transform: capitalize;
         }
 
-        @include a.grid(1, 1, 0) {
+        @include a.grid(1, 0) {
             grid-template-areas:
                 'h'
                 'b'

@@ -1,29 +1,16 @@
-@use 'sass:color';
-
 @mixin link($type: light) {
     a {
-        text-decoration: none;
-        color: var(--link-light-primary);
-        font-weight: 600;
-        cursor: pointer;
-        transition: filter 0.3s ease-out;
-
         &:hover {
-            filter: brightness(0.8);
-        }
-        &:visited {
-            color: var(--link-light-visited);
+            @apply text-gray-400;
         }
 
-        @if ($type!=light) {
+        @if ($type==dark) {
             &:hover {
                 filter: brightness(0.6);
-            }
-            &:visited {
-                color: var(--link-dark-visited);
             }
         }
 
         @content;
+        @apply transition duration-300 ease-out;
     }
 }

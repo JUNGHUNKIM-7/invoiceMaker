@@ -1,19 +1,19 @@
 @use 'variables' as *;
 
 @mixin mq-tablet() {
-    @media only screen and (min-width: map-get($breakpoints, tablet)) {
+    @screen sm {
         @content;
     }
 }
 
 @mixin mq-desktop() {
-    @media only screen and (min-width: map-get($breakpoints, desktop)) {
+    @screen md {
         @content;
     }
 }
 
 @mixin mq-wide() {
-    @media only screen and (min-width: map-get($breakpoints, wide)) {
+    @screen lg {
         @content;
     }
 }

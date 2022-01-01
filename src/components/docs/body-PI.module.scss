@@ -3,13 +3,13 @@
 @mixin mainBodyPI() {
     & {
         border-bottom: 1px solid;
-        @include a.grid(4, 1, 0) {
+        @include a.grid(4, 1) {
             grid-auto-rows: auto 1fr auto;
         }
 
         &__elems {
             grid-column: 1/-1;
-            @include a.grid(4, 1, 0);
+            @include a.grid(4, 1);
 
             &__left {
                 grid-column: 1/3;
@@ -19,7 +19,7 @@
                     border-bottom: 1px solid;
                 }
                 @include a.mq-desktop {
-                    @include a.grid(2, 1, 0);
+                    @include a.grid(2, 1);
                     > div {
                         &:first-child {
                             grid-column: 1/2;
@@ -34,7 +34,7 @@
 
             &__right {
                 grid-column: 3/-1;
-                @include a.grid(4, 1, 0);
+                @include a.grid(4, 1);
                 > div {
                     padding: 0.5em;
                     border-right: 1px solid;
@@ -52,7 +52,7 @@
             border-top: 2px dashed;
             margin-top: 2em;
             grid-column: 1/-1;
-            @include a.grid(4, 1, 0);
+            @include a.grid(4, 1);
 
             > div {
                 &:first-child {

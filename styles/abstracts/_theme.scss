@@ -1,25 +1,17 @@
-@use '../components/index' as c;
+@use '../components' as *;
 
 @mixin darkMode($dark) {
+    // @apply font-primary;
     @if $dark == false {
-        background-color: var(--light-bg);
-        color: var(--light-font);
-        border-color: #292524;
-
-        @include c.button();
-        @include c.link();
-        @include c.input();
-
-        @content;
+        @apply bg-gray-200 text-gray-900;
+        //body, contains components
+        @include button();
+        @include link();
+        @include input();
     } @else {
-        background-color: var(--dark-bg);
-        color: var(--dark-font);
-        border-color: #adbac7;
-
-        @include c.button(dark);
-        @include c.link(dark);
-        @include c.input(dark);
-
-        @content;
+        @apply bg-gray-800 text-white;
+        @include button(dark);
+        @include link(dark);
+        @include input(dark);
     }
 }

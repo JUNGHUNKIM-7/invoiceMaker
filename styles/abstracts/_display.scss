@@ -1,28 +1,16 @@
-@mixin grid($repeat: 0, $fr: 1, $gap: 0) {
-    display: grid;
-    gap: #{$gap}rem;
-    grid-template-columns: repeat(#{$repeat}, minmax(min-content, #{$fr}fr));
-    grid-auto-rows: minmax(min-content, auto);
-    grid-auto-flow: dense;
+@mixin grid($cols: 0, $gap: 1) {
+    @apply grid auto-rows-min grid-cols-#{$cols} gap-#{$gap};
     @content;
 }
 
-@mixin flex(
-    $mainAxis: flex-start,
-    $crossAxis: flex-start,
-    $direction: row,
-    $gap: 0
-) {
-    @if $direction != row {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: $crossAxis;
-        align-items: $mainAxis;
-        gap: #{$gap}rem;
+@mixin flex($horizontal: center, $vertical: center, $direction: row, $gap: 1) {
+    @apply flex;
+    @if $direction == col {
+        @apply flex-col flex-wrap gap-#{$gap};
+        justify-content: $vertical;
+        align-items: $horizontal;
     }
-    display: flex;
-    flex-flow: $direction wrap;
-    justify-content: $mainAxis;
-    align-items: $crossAxis;
-    gap: #{$gap}rem;
+    @apply flex-row flex-wrap gap-#{$gap};
+    justify-content: $horizontal;
+    align-items: $vertical;
 }

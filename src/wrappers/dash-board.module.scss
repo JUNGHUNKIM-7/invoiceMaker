@@ -4,7 +4,7 @@
 @use '../components/dashboard/board-recent-cards.module.scss' as c;
 
 .board {
-    @include a.grid(5, 1, 1) {
+    @include a.grid(5, 1) {
         grid-template-areas:
             'n t t t t'
             'n r r r r';
@@ -30,7 +30,7 @@
     }
 
     @include a.mq-tablet {
-        @include a.grid(8, 1, 2) {
+        @include a.grid(8, 2) {
             grid-template-areas:
                 'n t t t t t t t'
                 'n r r r r r r r';
@@ -38,7 +38,7 @@
         margin: 0 4em;
     }
     @include a.mq-desktop {
-        @include a.grid(12, 1, 2) {
+        @include a.grid(12, 2) {
             grid-template-areas:
                 'n n n n n n n n n n n n'
                 't t t t t t t t t t t t'

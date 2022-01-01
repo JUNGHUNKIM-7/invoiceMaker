@@ -1,24 +1,12 @@
-@use 'sass:color';
-
 @mixin button($type: light) {
     button {
-        outline: none;
-        padding: 0.5em 1em;
-        min-width: min-content;
-        border-radius: 5px;
-        text-transform: uppercase;
-        font: {
-            family: inherit;
-            weight: 600;
-        }
-        color: inherit;
-        transition: box-shadow 0.2s ease-out;
-
-        border: 1px solid var(--button-light-border);
-        background-color: var(--button-light-bg);
+        @apply min-w-min outline-none px-8 py-2
+        border border-opacity-10 border-black rounded
+        uppercase font-medium
+        transition ease-out duration-300;
 
         &:hover {
-            box-shadow: 0px 5px 10px #d6d3d1;
+            box-shadow: 0 5px 10px #d6d3d1;
         }
 
         &:active {
@@ -26,14 +14,10 @@
         }
 
         @if ($type!=light) {
-            border: 1px solid var(--button-dark-border);
-            background-color: var(--button-dark-bg);
-
+            @apply border-opacity-20 border-gray-400;
             &:hover {
-                background-color: var(--button-dark-bg);
-                box-shadow: 0px 3px 10px #52525b;
+                box-shadow: 0 3px 10px #52525b;
             }
-
             &:active {
                 background-color: inherit;
             }

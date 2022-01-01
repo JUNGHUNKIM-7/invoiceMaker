@@ -13,7 +13,6 @@ import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { useRouting } from '../../utils/routing'
 import { endPoint } from '../../utils/end-points'
 
-
 const NavComponent: NextPage = () => {
     const { routerPush } = useRouting()
 

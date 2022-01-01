@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write pages/*.{tsx,scss} pages/**/*.{ts,tsx,scss} src/components/**/*.{tsx,scss} src/styles/**/*.scss src/utils/**/*.{ts,tsx}"
+    "format": "prettier --write pages/**/*.{ts,tsx,scss} src/**/**/*.{ts,tsx,scss} styles/**/*.scss styles/*.scss src/utils/*.{ts,tsx}"
   },
   "dependencies": {
     "@prisma/client": "^3.7.0",

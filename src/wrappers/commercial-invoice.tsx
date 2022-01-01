@@ -5,7 +5,6 @@ import HeaderCi from '../components/docs/header-CI'
 import BodyCi from '../components/docs/body-CI'
 import Footer from '../components/docs/footer'
 
-
 const CommercialInvoice: NextPage<Pick<PageProps, 'title'>> = ({ title }) => {
     return (
         <div className={l.gridWrapper}>

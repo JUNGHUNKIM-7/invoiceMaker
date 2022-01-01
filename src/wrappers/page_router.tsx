@@ -8,7 +8,6 @@ import SalesContract from './sales-contract'
 import RequestForQuotation from '../components/docs/request-for-quotation'
 import { useRouting } from '../utils/routing'
 
-
 export interface PageProps {
     page: string
     title: string | undefined
